@@ -279,8 +279,13 @@
             <div class="info">📅 Jumat, 8 Agustus 2025</div>
 
             <div class="buttons">
-                <button class="btn-gray">🔎 Lihat Berkas</button>
-                <button class="btn-gray">⬇ Unduh</button>
+                <a href="URL_UNTUK_MELIHAT_BERKAS" class="btn-link btn-gray">
+                    🔎 Lihat Berkas
+                </a>
+                
+                <a href="URL_UNTUK_FILE_YANG_DIUNDUH" class="btn-link btn-gray" download="nama_file_surat.pdf">
+                    ⬇ Unduh
+                </a>
             </div>
         </div>
 
@@ -290,8 +295,13 @@
             <div class="info">📅 Jumat, 8 Agustus 2025</div>
 
             <div class="buttons">
-                <button class="btn-gray">🔎 Lihat Berkas</button>
-                <button class="btn-gray">⬇ Unduh</button>
+                    <a href="berkas" class="btn-link btn-gray">
+                        🔎 Lihat Berkas
+                    </a>
+                    
+                    <a href="URL_UNTUK_FILE_YANG_DIUNDUH" class="btn-link btn-gray" download="nama_file_surat.pdf">
+                        ⬇ Unduh
+                    </a>
             </div>
         </div>
 
@@ -301,8 +311,13 @@
             <div class="info">📅 Jumat, 8 Agustus 2025</div>
 
             <div class="buttons">
-                <button class="btn-gray">🔎 Lihat Berkas</button>
-                <button class="btn-gray">⬇ Unduh</button>
+                    <a href="dokumen" class="btn-link btn-gray">
+                        🔎 Lihat Berkas
+                    </a>
+                    
+                    <a href="URL_UNTUK_FILE_YANG_DIUNDUH" class="btn-link btn-gray" download="nama_file_surat.pdf">
+                        ⬇ Unduh
+                    </a>
             </div>
         </div>
     </div>

@@ -61,18 +61,10 @@
                 <div class="navbar-nav w-100">
                     <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>DAHSBOARD</a>
                     <a href="beritaback" class="nav-item nav-link" ><i class="fa fa-laptop me-2"></i>BERITA</a>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Produk UMKM</a>
+                    <a href="produkindex" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Produk UMKM</a>
                     <a href="ppidback" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>PPID</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>LOGOUT</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
-                        </div>
+                    
                     </div>
                 </div>
             </nav>
@@ -174,47 +166,86 @@
 
 
             <!-- Sale & Revenue Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
+   
+        <div class="container-fluid pt-4 px-4">
+            <div class="p-4 rounded" style="background:#cbb1ab;">
+                
+                <!-- 4 Kotak Statistik -->
+                <div class="row g-4 mb-4">
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Sale</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
+                        <div class="rounded p-4 text-center" style="background:#f6e3a1; color:#000;">
+                            <h2 class="mb-0" style="color:#000;">120</h2>
+                            <p class="mb-0" style="color:#000;">Total User</p>
                         </div>
                     </div>
+
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Sale</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
+                        <div class="rounded p-4 text-center" style="background:#ff60b8; color:#fff;">
+                            <h2 class="mb-0">45</h2>
+                            <p class="mb-0">Total Berita</p>
                         </div>
                     </div>
+
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
+                        <div class="rounded p-4 text-center" style="background:#a374c5; color:#fff;">
+                            <h2 class="mb-0">32</h2>
+                            <p class="mb-0">Total Produk</p>
                         </div>
                     </div>
+
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
+                        <div class="rounded p-4 text-center" style="background:#75b9d6; color:#000;">
+                            <h2 class="mb-0">980</h2>
+                            <p class="mb-0">Total Kunjungan</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Ringkasan Cepat -->
+                <div class="bg-light p-4 rounded mb-4" style="color:#000;">
+                    <h5 class="mb-3" style="color:#000;">Ringkasan Cepat</h5>
+                    <ul style="font-size:14px; color:#000;">
+                        <li>Ada 5 berita yang belum dipublikasikan</li>
+                        <li>3 produk menunggu verifikasi</li>
+                        <li>User baru minggu ini: 27</li>
+                        <li>Sistem berjalan normal ✓</li>
+                    </ul>
+                </div>
+
+                <!-- Data Terbaru -->
+                <div class="bg-light p-4 rounded" style="color:#000;">
+                    <h5 class="mb-3" style="color:#000;">Data Terbaru</h5>
+
+                    <table class="table table-bordered table-striped" style="font-size:14px; color:#000;">
+    <thead>
+        <tr>
+            <th style="color:#000;">Nama</th>
+            <th style="color:#000;">Kategori</th>
+            <th style="color:#000;">Tanggal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="color:#000;">Musyawarah desa</td>
+            <td style="color:#000;">Berita</td>
+            <td style="color:#000;">20 Jan 2025</td>
+        </tr>
+        <tr>
+            <td style="color:#000;">Kopi jahe original</td>
+            <td style="color:#000;">Produk</td>
+            <td style="color:#000;">21 Jan 2024</td>
+        </tr>
+    </tbody>
+</table>
+
+                </div>
+
             </div>
+        </div>
+
             <!-- Sale & Revenue End -->
+
+
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">

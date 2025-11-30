@@ -58,8 +58,7 @@
     <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
         <a href="index.html" class="navbar-brand">
             <h1 class="m-0 display-4 text-uppercase text-white">
-                <i class="bi bi-building text-primary me-2"></i>WEBUILD
-            </h1>
+                <i class="bi bi-building text-primary me-2"></i>WEB DESA </h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -146,7 +145,7 @@
                 <div class="p-4">
                     <span class="ms-3 mb-3"><i class="far fa-calendar-alt text-primary me-2"></i>20 JUli,2030</span>
 
-                    <h4 class="mb-3">"Gebyar BUMDes" Desa Kujangsari</h4>
+                    <h4 class="mb-3">"Gebyar BumDes" Desa Kujangsari</h4>
 
                 </div>
             </div>

@@ -37,7 +37,7 @@
     <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
+                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEB DESA</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -291,8 +291,8 @@
 
         <div class="card">
             <div class="card-title">SURAT KETERANGAN PINDAH / DATANG</div>
-            <div class="info">📄 Rencana Kerja Pemerintah Desa</div>
-            <div class="info">📅 Jumat, 8 Agustus 2025</div>
+            <div class="info">📄 Data Administrasi Penduduk</div>
+            <div class="info">📅 SEnin, 12 Agustus 2025</div>
 
             <div class="buttons">
                     <a href="berkas" class="btn-link btn-gray">
@@ -306,9 +306,9 @@
         </div>
 
         <div class="card">
-            <div class="card-title">SURAT KETERANGAN LAHIR</div>
-            <div class="info">📄 Rencana Kerja Pemerintah Desa</div>
-            <div class="info">📅 Jumat, 8 Agustus 2025</div>
+            <div class="card-title">SURAT KETERANGAN USAHA</div>
+            <div class="info">📄 Pendataan Pelaku UMKM Desa</div>
+            <div class="info">📅 Rabu, 14 Agustus 2025</div>
 
             <div class="buttons">
                     <a href="dokumen" class="btn-link btn-gray">

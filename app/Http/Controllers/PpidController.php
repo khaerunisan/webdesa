@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 class PpidController extends Controller
 {
-    
-        public function index()
+    public function index()
     {
         return view('page.backend.ppid.ppidback');
     }
@@ -35,5 +34,37 @@ class PpidController extends Controller
     public function destroy($id)
     {
         // proses hapus
+    }
+
+
+    // ================================
+    //          DOWNLOAD BERKAS
+    // ================================
+    public function downloadBerkas($id)
+    {
+        // Contoh: file disimpan di public/uploads/ppid/berkas/
+        $filePath = public_path("uploads/ppid/berkas/berkas_" . $id . ".pdf");
+
+        if (!file_exists($filePath)) {
+            abort(404, "File berkas tidak ditemukan");
+        }
+
+        return response()->download($filePath);
+    }
+
+
+    // ================================
+    //          DOWNLOAD DOKUMEN
+    // ================================
+    public function downloadDokumen($id)
+    {
+        // Contoh: file disimpan di public/uploads/ppid/dokumen/
+        $filePath = public_path("uploads/ppid/dokumen/dokumen_" . $id . ".pdf");
+
+        if (!file_exists($filePath)) {
+            abort(404, "File dokumen tidak ditemukan");
+        }
+
+        return response()->download($filePath);
     }
 }

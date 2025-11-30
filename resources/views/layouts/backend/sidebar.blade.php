@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>DAHSBOARD</a>
+                    <a href="index.html" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>DAHSBOARD</a>
                      <a href="beritaback" class="nav-item nav-link"><i class="fa fa-th me-2"></i>BERITA</a>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PRODUK UMKM</a>
                     <a href="ppidback" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>PPID</a>

@@ -5,6 +5,7 @@ use App\Http\Controllers\PpidController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\SuratController; // <-- Tambahan
 
 // ==================================================
 // FRONTEND (USER WEBSITE)
@@ -20,6 +21,14 @@ Route::prefix('/')->group(function () {
     Route::get('/berkas', fn() => view('page.frontend.ppid.berkas'));
     Route::get('/dokumen', fn() => view('page.frontend.ppid.dokumen'));
 });
+
+
+// ==================================================
+// DOWNLOAD SURAT (BARU DITAMBAHKAN)
+// ==================================================
+
+Route::get('/surat/download', [SuratController::class, 'downloadSurat'])
+    ->name('surat.download');
 
 
 // ==================================================
@@ -77,15 +86,24 @@ Route::prefix('ppidback')->group(function () {
 
 
 // ==================================================
-// CRUD PRODUK BACKEND (saya tambahkan karena kamu sudah punya halaman produk)
+// CRUD PRODUK BACKEND
 // ==================================================
 
 Route::prefix('produkback')->group(function () {
-    Route::get('/', [ProdukController::class, 'index'])->name('produk.index');
-    Route::get('/create', [ProdukController::class, 'create'])->name('produk.create');
+    Route::get('/', [ProdukController::class, 'index'])->name('produkback');
+    Route::get('/produkback/create', [ProdukController::class, 'create'])->name('produkback.create');
     Route::post('/', [ProdukController::class, 'store'])->name('produk.store');
     Route::get('/{id}', [ProdukController::class, 'show'])->name('produk.show');
     Route::get('/{id}/edit', [ProdukController::class, 'edit'])->name('produk.edit');
     Route::put('/{id}', [ProdukController::class, 'update'])->name('produk.update');
     Route::delete('/{id}', [ProdukController::class, 'destroy'])->name('produk.destroy');
 });
+
+// ==================================================
+// DOWNLOAD BERKAS & DOKUMEN PPID
+// ==================================================
+Route::get('/ppid/berkas/download/{id}', [PpidController::class, 'downloadBerkas'])
+    ->name('ppid.berkas.download');
+
+Route::get('/ppid/dokumen/download/{id}', [PpidController::class, 'downloadDokumen'])
+    ->name('ppid.dokumen.download');

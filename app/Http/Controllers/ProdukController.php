@@ -9,14 +9,17 @@ class ProdukController extends Controller
 {
     public function index()
     {
+        // Ambil semua produk dari tabel "produk"
         $produk = DB::table('produk')->get();
+
         return view('page.backend.produk.produkback', compact('produk'));
     }
 
     public function create()
-    {
-        return view('page.backend.produk.create');
-    }
+{
+    return view('page.backend.produk.produkback.create');
+}
+
 
     public function store(Request $request)
     {
@@ -27,7 +30,6 @@ class ProdukController extends Controller
             'gambar' => 'required|image',
         ]);
 
-        // Upload gambar
         $fileName = time() . '.' . $request->gambar->extension();
         $request->gambar->move(public_path('uploads/produk'), $fileName);
 
@@ -38,7 +40,7 @@ class ProdukController extends Controller
             'gambar' => $fileName,
         ]);
 
-        return redirect()->route('produk.index')->with('success', 'Produk berhasil ditambahkan');
+        return redirect()->route('produkback')->with('success', 'Produk berhasil ditambahkan');
     }
 
     public function show($id)
@@ -75,12 +77,13 @@ class ProdukController extends Controller
 
         DB::table('produk')->where('id', $id)->update($updateData);
 
-        return redirect()->route('produk.index')->with('success', 'Produk berhasil diperbarui');
+        return redirect()->route('produkback')->with('success', 'Produk berhasil diperbarui');
     }
 
     public function destroy($id)
     {
         DB::table('produk')->where('id', $id)->delete();
-        return redirect()->route('produk.index')->with('success', 'Produk berhasil dihapus');
+
+        return redirect()->route('produkback')->with('success', 'Produk berhasil dihapus');
     }
 }

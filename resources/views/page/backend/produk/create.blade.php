@@ -13,11 +13,11 @@
         @csrf
 
         <label style="font-weight:bold; color:#1a3b5d;">Nama Produk</label>
-        <input type="text" name="nama_produk" placeholder="kripik jamur" required
+        <input type="text" name="nama_produk" placeholder="Masukan Nama Produk" required
                style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
 
         <label style="font-weight:bold; color:#1a3b5d;">Deskripsi Produk</label>
-        <textarea name="deskripsi" placeholder="Keripik jamur dengan tekstur renyah ..."
+        <textarea name="deskripsi" placeholder="Deskripsi Produk"
                   style="width:100%; height:110px; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;"></textarea>
 
         <label style="font-weight:bold; color:#1a3b5d;">Gambar</label>
@@ -25,7 +25,7 @@
                style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
 
         <label style="font-weight:bold; color:#1a3b5d;">Harga Produk</label>
-        <input type="number" name="harga" placeholder="15000" required
+        <input type="number" name="harga" placeholder="harga Produk" required
                style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
 
         <div class="button-area" style="margin-top:20px; display:flex; justify-content:flex-end; gap:12px;">

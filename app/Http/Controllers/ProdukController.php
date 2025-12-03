@@ -16,10 +16,9 @@ class ProdukController extends Controller
     }
 
     public function create()
-{
-    return view('page.backend.produk.create');
-}
-
+    {
+        return view('page.backend.produk.create');
+    }
 
     public function store(Request $request)
     {
@@ -85,5 +84,14 @@ class ProdukController extends Controller
         DB::table('produk')->where('id', $id)->delete();
 
         return redirect()->route('produkback')->with('success', 'Produk berhasil dihapus');
+    }
+
+    // ================================
+    // FRONTEND PRODUK DESA
+    // ================================
+    public function frontend()
+    {
+        $produk = DB::table('produk')->get();
+        return view('page.frontend.produk.produkdesa', compact('produk'));
     }
 }

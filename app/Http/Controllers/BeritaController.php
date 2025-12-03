@@ -52,12 +52,11 @@ class BeritaController extends Controller
     // ========================
     // DETAIL BERITA
     // ========================
-   public function show($id)
-     {
-    $berita = Berita::findOrFail($id);
-    return view('page.backend.berita.show', compact('berita'));
-     }
-
+    public function show($id)
+    {
+        $berita = Berita::findOrFail($id);
+        return view('page.backend.berita.show', compact('berita'));
+    }
 
     // ========================
     // TAMPILKAN FORM EDIT
@@ -110,4 +109,14 @@ class BeritaController extends Controller
 
         return redirect()->route('berita.index')->with('success', 'Berita berhasil dihapus');
     }
+
+    // ==============================================================
+    // FRONTEND — MENGIRIM DATA KE beritadesa.blade.php (TAMBAHAN)
+    // ==============================================================
+    public function frontend()
+    {
+        $berita = Berita::latest()->get();
+        return view('page.frontend.berita.beritadesa', compact('berita'));
+    }
 }
+

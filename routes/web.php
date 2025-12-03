@@ -15,8 +15,9 @@ Route::prefix('/')->group(function () {
     Route::get('/', fn() => view('page.frontend.profiledesa.index'));
     Route::get('/profil', fn() => view('page.frontend.profiledesa.profil'));
     Route::get('/galery', fn() => view('page.frontend.galery.galeryindex'));
-    Route::get('/berita', fn() => view('page.frontend.berita.beritadesa'));
-    Route::get('/produk', fn() => view('page.frontend.produk.produkdesa'));
+    Route::get('/berita', [BeritaController::class, 'frontend'])->name('berita.frontend');
+    Route::get('/produk', [App\Http\Controllers\ProdukController::class, 'frontend'])->name('produkdesa');
+
     Route::get('/ppid', fn() => view('page.frontend.ppid.ppiddesa'));
     Route::get('/berkas', fn() => view('page.frontend.ppid.berkas'));
     Route::get('/dokumen', fn() => view('page.frontend.ppid.dokumen'));

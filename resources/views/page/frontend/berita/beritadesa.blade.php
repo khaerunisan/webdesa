@@ -15,7 +15,6 @@
             border-radius: 5px;
         }
 
-        /* Biar semua card tingginya sama */
         .card-box {
             height: 100%;
             display: flex;
@@ -30,25 +29,19 @@
         }
     </style>
 
-    <!-- Favicon -->
     <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries -->
     <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
 
-    <!-- Bootstrap -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- Template Style -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
@@ -81,39 +74,34 @@
                 </div>
 
                 <a href="galery" class="nav-item nav-link">Galery</a>
-                 <a href="ppid" class="nav-item nav-link ">PPID </a>
-                </a>
+                <a href="ppid" class="nav-item nav-link ">PPID </a>
             </div>
         </div>
     </nav>
 </div>
 <!-- Navbar End -->
 
-    <style>
+<style>
+    .navbar {
+        background: #0c1a33;
+        width: 100%;
+        padding: 12px 40px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
 
-        /* Navbar */
-        .navbar {
-            background: #0c1a33;
-            width: 100%;
-            padding: 12px 40px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 25px;
-        }
+    .navbar a {
+        color: #c7c7c7;
+        text-decoration: none;
+        font-size: 13px;
+    }
 
-        .navbar a {
-            color: #c7c7c7;
-            text-decoration: none;
-            font-size: 13px;
-        }
-
-        .navbar a.active {
-            color: #ff7d7d;
-            font-weight: bold;
-        }
-
-        </style>
-
+    .navbar a.active {
+        color: #ff7d7d;
+        font-weight: bold;
+    }
+</style>
 
 <!-- Blog Start -->
 <div class="container-fluid py-6 px-5">
@@ -125,44 +113,33 @@
 
     <div class="row g-5">
 
-        <!-- Card 1 -->
+        <!-- LOOP BERITA DARI BACKEND -->
+        @foreach ($berita as $item)
         <div class="col-lg-4 col-md-6">
             <div class="bg-light card-box">
-                <img class="card-image" src="{{ asset('assets/img/blog-1.jpg') }}" alt="">
-                <div class="p-4">
-                    <span class="ms-3 mb-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan 2045</span>
 
-                    <h4 class="mb-3">Desa Kujangsari jadi pusat eduwisata peternakan terpadu</h4>
+                <img class="card-image" src="{{ asset('storage/' . $item->gambar) }}" alt="">
+
+                <div class="p-4">
+
+                    <span class="ms-3 mb-3">
+                        <i class="far fa-calendar-alt text-primary me-2"></i>
+                        {{ \Carbon\Carbon::parse($item->tanggal)->format('d F Y') }}
+                    </span>
+
+                    <h4 class="mb-3">{{ $item->judul }}</h4>
+
+                    <p>{{ Str::limit($item->deskripsi, 120) }}</p>
+
+                    <a href="{{ route('berita.show', $item->id) }}" class="btn btn-primary mt-auto">
+                        Baca Selengkapnya
+                    </a>
 
                 </div>
             </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="col-lg-4 col-md-6">
-            <div class="bg-light card-box">
-                <img class="card-image" src="{{ asset('assets/img/bantuan.jpg') }}" alt="">
-                <div class="p-4">
-                    <span class="ms-3 mb-3"><i class="far fa-calendar-alt text-primary me-2"></i>20 JUli,2030</span>
-
-                    <h4 class="mb-3">"Gebyar BumDes" Desa Kujangsari</h4>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-lg-4 col-md-6">
-            <div class="bg-light card-box">
-                <img class="card-image" src="{{ asset('assets/img/30.jpg') }}" alt="">
-                <div class="p-4">
-                    <span class="ms-3 mb-3"><i class="far fa-calendar-alt text-primary me-2"></i>18 April,2035</span>
-
-                    <h4 class="mb-3">Pemerintah Desa Kujangsari salurkan bantuan untuk lansia, disabilitas, dan penderita penyakit kronis</h4>
-
-                </div>
-            </div>
-        </div>
+        @endforeach
+        <!-- END LOOP -->
 
     </div>
 

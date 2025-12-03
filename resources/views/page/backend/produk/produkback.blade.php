@@ -16,7 +16,20 @@
 
     <div class="card" style="background:#8AB7C4; padding:30px; display:flex; gap:30px; border-radius:4px; width:100%;">
 
-        <img src="gambar-produk.jpg" style="width:230px; height:230px; object-fit:cover; background:#fff; border-radius:3px;">
+
+        <!-- FOTO PRODUK 3 BERJEJER -->
+        <div style="display:flex; flex-direction:row; gap:10px;">
+            <img src="kripik.jpeg" 
+                 style="width:230px; height:230px; object-fit:cover; background:#fff; border-radius:3px;">
+
+            <img src="kripik.jpeg" 
+                 style="width:230px; height:230px; object-fit:cover; background:#fff; border-radius:3px;">
+
+            <img src="kripik.jpeg" 
+                 style="width:230px; height:230px; object-fit:cover; background:#fff; border-radius:3px;">
+        </div>
+        <!-- END FOTO -->
+
 
         <div class="right" style="flex:1; color:#fff;">
 
@@ -30,12 +43,9 @@
                 “Keripik jamur dengan tekstur renyah dan cita rasa gurih yang khas.
                 Cocok sebagai camilan di rumah maupun pendamping usaha makanan,
                 serta memiliki nilai jual tinggi bagi UMKM kuliner.”
-            </div>
+            </div>  
 
-            <div class="aksi-title" style="margin-top:20px; font-weight:bold; font-size:17px;">
-                Aksi
-            </div>
-
+            
             <div class="btn-wrap" style="margin-top:10px;">
                 <a class="btn-detail" href="#" 
                     style="padding:4px 10px; font-size:13px; border-radius:3px; background:#4E7EC9; color:white; text-decoration:none;">Detail</a>

@@ -3,7 +3,6 @@
 @section('content')
 
 <style>
-    /* HANYA CSS YANG DIPERLUKAN */
     .card-custom {
         width: 95%;
         background: white;
@@ -64,12 +63,11 @@
 </style>
 
 
-
 <div class="card-custom">
 
-    <h2>Daftar berita</h2>
+    <h2>Daftar Berita</h2>
 
-    <a href="{{ route('berita.create') }}" class="btn-tambah">+ Tambah berita</a>
+    <a href="{{ route('berita.create') }}" class="btn-tambah">+ Tambah Berita</a>
 
     <table>
         <tr>
@@ -80,18 +78,27 @@
             <th>Aksi</th>
         </tr>
 
-        {{-- Contoh data statis (nanti diganti dari database) --}}
+        @forelse ($berita as $item)
         <tr>
-            <td>Gotong royong bersama warga</td>
-            <td><img src="https://via.placeholder.com/75x55"></td>
-            <td>Warga bergotong royong membersihkan saluran air di pinggir jalan desa.</td>
-            <td>12 oktober 2025</td>
+            <td>{{ $item->judul }}</td>
+
+            <td>
+                <img src="{{ asset('storage/' . $item->gambar) }}" alt="">
+            </td>
+
+            <td style="max-width: 350px;">
+                {{ Str::limit($item->deskripsi, 80) }}
+            </td>
+
+            <td>{{ \Carbon\Carbon::parse($item->tanggal)->format('d F Y') }}</td>
+
             <td>
                 <div class="aksi">
-                    <a href="{{ route('berita.show', 1) }}" class="detail">Detail</a>
-                    <a href="{{ route('berita.edit', 1) }}" class="edit">Edit</a>
+                    <a href="{{ route('berita.show', $item->id) }}" class="detail">Detail</a>
 
-                    <form action="{{ route('berita.destroy', 1) }}" method="POST">
+                    <a href="{{ route('berita.edit', $item->id) }}" class="edit">Edit</a>
+
+                    <form action="{{ route('berita.destroy', $item->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="delete" onclick="return confirm('Yakin ingin menghapus?')">Delete</button>
@@ -100,43 +107,11 @@
             </td>
         </tr>
 
+        @empty
         <tr>
-            <td>peresmian balai desa</td>
-            <td><img src="https://via.placeholder.com/75x55"></td>
-            <td>Perangkat desa mengikuti acara atau rapat resmi pemerintahan desa.</td>
-            <td>5 oktober 2025</td>
-            <td>
-                <div class="aksi">
-                    <a href="{{ route('berita.show', 2) }}" class="detail">Detail</a>
-                    <a href="{{ route('berita.edit', 2) }}" class="edit">Edit</a>
-
-                    <form action="{{ route('berita.destroy', 2) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="delete" onclick="return confirm('Yakin ingin menghapus?')">Delete</button>
-                    </form>
-                </div>
-            </td>
+            <td colspan="5">Belum ada berita.</td>
         </tr>
-
-        <tr>
-            <td>kegiatan posyandu di desa</td>
-            <td><img src="https://via.placeholder.com/75x55"></td>
-            <td>Kegiatan Posyandu, ibu dan anak menerima pelayanan kesehatan serta pembagian PMT.</td>
-            <td>20 oktober 2024</td>
-            <td>
-                <div class="aksi">
-                    <a href="{{ route('berita.show', 3) }}" class="detail">Detail</a>
-                    <a href="{{ route('berita.edit', 3) }}" class="edit">Edit</a>
-
-                    <form action="{{ route('berita.destroy', 3) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="delete" onclick="return confirm('Yakin ingin menghapus?')">Delete</button>
-                    </form>
-                </div>
-            </td>
-        </tr>
+        @endforelse
 
     </table>
 

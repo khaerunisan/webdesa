@@ -20,6 +20,8 @@ Route::prefix('/')->group(function () {
     Route::get('/ppid', fn() => view('page.frontend.ppid.ppiddesa'));
     Route::get('/berkas', fn() => view('page.frontend.ppid.berkas'));
     Route::get('/dokumen', fn() => view('page.frontend.ppid.dokumen'));
+    Route::get('/surat', fn() => view('page.frontend.ppid.surat'));
+    Route::get('/hukum', fn() => view('page.frontend.ppid.hukum'));
 });
 
 
@@ -90,13 +92,20 @@ Route::prefix('ppidback')->group(function () {
 // ==================================================
 
 Route::prefix('produkback')->group(function () {
-    Route::get('/', [ProdukController::class, 'index'])->name('produkback');
-    Route::get('/produkback/create', [ProdukController::class, 'create'])->name('produkback.create');
-    Route::post('/', [ProdukController::class, 'store'])->name('produk.store');
-    Route::get('/{id}', [ProdukController::class, 'show'])->name('produk.show');
-    Route::get('/{id}/edit', [ProdukController::class, 'edit'])->name('produk.edit');
-    Route::put('/{id}', [ProdukController::class, 'update'])->name('produk.update');
-    Route::delete('/{id}', [ProdukController::class, 'destroy'])->name('produk.destroy');
+    
+Route::get('/produkback', [ProdukController::class, 'index'])->name('produkback');
+
+Route::get('/produkback/create', [ProdukController::class, 'create'])->name('produk.create');
+
+Route::post('/produkback/store', [ProdukController::class, 'store'])->name('produk.store');
+
+Route::get('/produkback/show/{id}', [ProdukController::class, 'show'])->name('produk.show');
+
+Route::get('/produkback/edit/{id}', [ProdukController::class, 'edit'])->name('produk.edit');
+
+Route::post('/produkback/update/{id}', [ProdukController::class, 'update'])->name('produk.update');
+
+Route::delete('/produkback/delete/{id}', [ProdukController::class, 'destroy'])->name('produk.delete');
 });
 
 // ==================================================

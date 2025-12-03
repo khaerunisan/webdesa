@@ -121,7 +121,8 @@
             DAN/ATAU PELAYANAN INFORMASI DI BADAN PUBLIK.
         </p>
 
-        <a href="#dasar_hukum" class="btn-blue">DASAR HUKUM PPID</a>
+         <button class="btn">DASAR HUKUM PPID</button>
+         
     </div>
 
 
@@ -173,7 +174,7 @@
             <span class="surat-title">SURAT KETERANGAN DOMISILI</span><br>
             <span class="surat-info">📄 Rencana Kerja Pemerintah Desa</span><br>
             <span class="surat-info">📅 Jumat, 8 Agustus 2025</span><br>
-            <a href="#" class="btn-blue">LIHAT BERKAS</a>
+            <a href="surat" class="btn-blue">LIHAT BERKAS</a>
             <a href="#" class="btn-blue">UNDUH</a>
         </div>
 

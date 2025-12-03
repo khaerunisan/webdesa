@@ -81,25 +81,26 @@
 
 <div class="form-container">
 
-    <form action="#" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('berita.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
 
         <label>Judul Berita</label>
-        <input type="text" placeholder="Masukan judul berita">
+        <input type="text" name="judul" placeholder="Masukan judul berita" required>
         <br><br>
 
         <label>Deskripsi</label>
-        <textarea placeholder="Masukan deskripsi berita"></textarea>
+        <textarea name="deskripsi" placeholder="Masukan deskripsi berita" required></textarea>
         <br><br>
 
         <label>Gambar</label>
-        <input type="file">
+        <input type="file" name="gambar" required>
         <br><br>
 
         <label>Tanggal</label>
-        <input type="text" placeholder="12 oktober 2025">
+        <input type="date" name="tanggal" required>
 
         <div class="button-area">
-            <button type="button" class="btn btn-batal">Batal</button>
+            <a href="{{ route('berita.index') }}" class="btn btn-batal">Batal</a>
             <button type="submit" class="btn btn-simpan">Simpan</button>
         </div>
     </form>

@@ -55,7 +55,7 @@ class BeritaController extends Controller
    public function show($id)
      {
     $berita = Berita::findOrFail($id);
-    return view('page.backend.berita.beritaback.detail', compact('berita'));
+    return view('page.backend.berita.show', compact('berita'));
      }
 
 

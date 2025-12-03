@@ -279,7 +279,7 @@
             <div class="info">📅 Jumat, 8 Agustus 2025</div>
 
             <div class="buttons">
-                <a href="URL_UNTUK_MELIHAT_BERKAS" class="btn-link btn-gray">
+                <a href="hukum" class="btn-link btn-gray">
                     🔎 Lihat Berkas
                 </a>
                 

@@ -17,7 +17,7 @@ class ProdukController extends Controller
 
     public function create()
 {
-    return view('page.backend.produk.produkback.create');
+    return view('page.backend.produk.create');
 }
 
 

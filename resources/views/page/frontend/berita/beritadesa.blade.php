@@ -54,23 +54,30 @@
 
 
 <!-- Navbar Start -->
-<div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
-    <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
+<div class="container-fluid sticky-top shadow-sm px-5 pe-lg-0"
+     style="background: linear-gradient(90deg, #3E747B, #528C94, #A0DEE3);">
+     
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0"
+         style="background: transparent !important;">
+         
         <a href="index.html" class="navbar-brand">
             <h1 class="m-0 display-4 text-uppercase text-white">
-                <i class="bi bi-building text-primary me-2"></i>WEB DESA </h1>
+                <i class="bi bi-building text-primary me-2"></i>WEB DESA
+            </h1>
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="profil" class="nav-item nav-link">Profile Desa</a>
-                <a href="berita" class="nav-item nav-link">Berita</a>
+                <a href="index.html" class="nav-item nav-link active text-white">Home</a>
+                <a href="profil" class="nav-item nav-link text-white">Profile Desa</a>
+                <a href="berita" class="nav-item nav-link text-white">Berita</a>
 
                 <div class="nav-item dropdown">
-                    <a href="produk" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produk</a>
+                    <a href="produk" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Produk</a>
                     <div class="dropdown-menu m-0">
                         <a href="project.html" class="dropdown-item">PPID</a>
                         <a href="team.html" class="dropdown-item">The Team</a>
@@ -80,14 +87,15 @@
                     </div>
                 </div>
 
-                <a href="galery" class="nav-item nav-link">Galery</a>
-                 <a href="ppid" class="nav-item nav-link ">PPID </a>
-                </a>
+                <a href="galery" class="nav-item nav-link text-white">Galery</a>
+                <a href="ppid" class="nav-item nav-link text-white">PPID</a>
             </div>
         </div>
+
     </nav>
 </div>
 <!-- Navbar End -->
+
 
     <style>
 
@@ -168,5 +176,84 @@
 
 </div>
 <!-- Blog End -->
+
+ <!-- Footer Start --> 
+<div class="footer container-fluid position-relative text-white-50 py-6 px-5"
+     style="background: linear-gradient(135deg, #3E747B, #528C94, #A0DEE3);">
+     
+    <div class="row g-5">
+        <div class="col-lg-6 pe-lg-5">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 display-4 text-uppercase text-white">
+                    <i class="bi bi-building text-primary me-2"></i>WEBUILD
+                </h1>
+            </a>
+            <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum
+               diam sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+            <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
+            <p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p>
+            <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-6 ps-lg-5">
+            <div class="row g-5">
+                <div class="col-sm-6">
+                    <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-light"
+                                   style="padding: 20px 30px;" placeholder="Your Email Address">
+                            <button class="btn btn-primary px-4">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-dark text-white border-top border-primary px-0">
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="py-4 px-5 text-center text-md-start">
+            <p class="mb-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+        </div>
+
+        <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
+            <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
+            <p class="mb-0">Distributed by <a class="text-dark" href="https://themewagon.com">ThemeWagon</a></p>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
 
 </html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>WEBUILD -  Construction Company Website Template Free</title>
+    <title>WEB DESA -  Construction Company Website Template Free</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -35,36 +35,48 @@
 <body>
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
-        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEB DESA</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="profil" class="nav-item nav-link">Profile Desa</a>
-                    <a href="berita" class="nav-item nav-link">Berita</a>
-                    <div class="nav-item dropdown">
-                        <a href="produk" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produk</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="project.html" class="dropdown-item">PPID</a>
-                            <a href="team.html" class="dropdown-item">The Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                        </div>
+<div class="container-fluid sticky-top shadow-sm px-5 pe-lg-0"
+     style="background: linear-gradient(90deg, #3E747B, #528C94, #A0DEE3);">
+     
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0"
+         style="background: transparent !important;">
+         
+        <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 display-4 text-uppercase text-white">
+                <i class="bi bi-building text-primary me-2"></i>WEB DESA
+            </h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active text-white">Home</a>
+                <a href="profil" class="nav-item nav-link text-white">Profile Desa</a>
+                <a href="berita" class="nav-item nav-link text-white">Berita</a>
+
+                <div class="nav-item dropdown">
+                    <a href="produk" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Produk</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="project.html" class="dropdown-item">PPID</a>
+                        <a href="team.html" class="dropdown-item">The Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
                     </div>
-                    <a href="galery" class="nav-item nav-link">Galery</a>
-                    <a href="ppid" class="nav-item nav-link ">PPID </a>
                 </div>
+
+                <a href="galery" class="nav-item nav-link text-white">Galery</a>
+                <a href="ppid" class="nav-item nav-link text-white">PPID</a>
             </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+        </div>
+
+    </nav>
+</div>
+<!-- Navbar End -->
+
 
     <style>
 
@@ -143,8 +155,9 @@
         
         <div class="col-lg-4 col-md-6">
             <a href="profil" class="text-decoration-none d-flex flex-column align-items-center text-center">
-                <div class="service-icon bg-white p-4 mb-3">
-                    <i class="fa fa-4x fa-building text-primary"></i> 
+               <div class="service-icon p-4 mb-3" 
+                style="background-color: #66A5AD; border-radius: 20px;">
+                    <i class="fa fa-4x fa-building" style="color:#000"></i> 
                 </div>
                 <div class="p-4 pt-0">
                     <h4 class="text-uppercase mb-0">PROFIL DESA</h4>
@@ -154,8 +167,9 @@
         
         <div class="col-lg-4 col-md-6">
              <a href="produk" class="text-decoration-none d-flex flex-column align-items-center text-center">
-                <div class="service-icon bg-white p-4 mb-3">
-                    <i class="fa fa-4x fa-shopping-cart text-primary"></i>
+                <div class="service-icon p-4 mb-3" 
+                style="background-color: #66A5AD; border-radius: 20px;">
+                    <i class="fa fa-4x fa-shopping-cart" style="color:#000"></i>
                 </div>
                 <div class="p-4 pt-0">
                     <h4 class="text-uppercase mb-0">PRODUK</h4>
@@ -165,8 +179,9 @@
         
         <div class="col-lg-4 col-md-6">
              <a href="ppid" class="text-decoration-none d-flex flex-column align-items-center text-center">
-                <div class="service-icon bg-white p-4 mb-3">
-                    <i class="fa fa-4x fa-eye text-primary"></i> 
+                <div class="service-icon p-4 mb-3" 
+                style="background-color: #66A5AD; border-radius: 20px;">
+                    <i class="fa fa-4x fa-eye" style="color:#000"></i> 
                 </div>
                 <div class="p-4 pt-0">
                     <h4 class="text-uppercase mb-0">PPID</h4>
@@ -176,8 +191,9 @@
         
         <div class="col-lg-4 col-md-6">
              <a href="berita" class="text-decoration-none d-flex flex-column align-items-center text-center">
-                <div class="service-icon bg-white p-4 mb-3">
-                    <i class="fa fa-4x fa-bullhorn text-primary"></i>
+                <div class="service-icon p-4 mb-3" 
+                style="background-color: #66A5AD; border-radius: 20px;">
+                    <i class="fa fa-4x fa-bullhorn" style="color:#000"></i>
                 </div>
                 <div class="p-4 pt-0">
                     <h4 class="text-uppercase mb-0">BERITA</h4>
@@ -187,8 +203,9 @@
         
         <div class="col-lg-4 col-md-6">
              <a href="#" class="text-decoration-none d-flex flex-column align-items-center text-center">
-                <div class="service-icon bg-white p-4 mb-3">
-                    <i class="fa fa-4x fa-envelope text-primary"></i>
+                <div class="service-icon p-4 mb-3" 
+                style="background-color: #66A5AD; border-radius: 20px;">
+                    <i class="fa fa-4x fa-envelope" style="color: #000;"></i>
                 </div>
                 <div class="p-4 pt-0">
                     <h4 class="text-uppercase mb-0">SURAT</h4>
@@ -198,8 +215,10 @@
         
         <div class="col-lg-4 col-md-6">
              <a href="galery" class="text-decoration-none d-flex flex-column align-items-center text-center">
-                <div class="service-icon bg-white p-4 mb-3">
-                    <i class="fa fa-4x fa-image text-primary"></i>
+                <div class="service-icon p-4 mb-3" 
+                style="background-color: #66A5AD; border-radius: 20px;">
+                    <i class="fa fa-4x fa-image" style="color: #000;"></i>
+
                 </div>
                 <div class="p-4 pt-0">
                     <h4 class="text-uppercase mb-0">GALERI</h4>
@@ -413,7 +432,7 @@
 
                 <!-- BOX PERBESAR -->
                 <a class="portfolio-title shadow-sm" href=""
-                   style="padding: 25px; min-height: 170px; display: block;">
+                   style="padding: 25px; min-height: 170px; display: block; background-color: #D9D9D9; border-radius: 6px;">
                     <p class="h4 text-uppercase mb-2">Air Terjun</p>
                     <span class="text-body" style="font-size: 15px;">
                         
@@ -433,7 +452,7 @@
 
                 <!-- BOX PERBESAR -->
                 <a class="portfolio-title shadow-sm" href=""
-                   style="padding: 25px; min-height: 170px; display: block;">
+                   style="padding: 25px; min-height: 170px; display: block; background-color: #D9D9D9; border-radius: 6px;">
                     <p class="h4 text-uppercase mb-2">Perbukitan & Laut</p>
                     <span class="text-body" style="font-size: 15px;">
                       
@@ -449,11 +468,11 @@
 
         <div class="col-xl-4 col-lg-4 col-md-6 portfolio-item first">
             <div class="position-relative portfolio-box">
-                <img class="img-fluid w-100" src="{{ asset('assets/img/sawah.webp.jpeg') }}" alt="">
+                <img class="img-fluid w-100" src="{{ asset('assets/img/hijau.jpeg') }}" alt="">
 
                 <!-- BOX PERBESAR -->
                 <a class="portfolio-title shadow-sm" href=""
-                   style="padding: 25px; min-height:170px; display: block;">
+                   style="padding: 25px; min-height: 170px; display: block; background-color: #D9D9D9; border-radius: 6px;">
                     <p class="h4 text-uppercase mb-2">Sawah Hijau</p>
                     <span class="text-body" style="font-size: 15px;">
                         
@@ -574,70 +593,84 @@
     <!-- Blog End -->
     
 
-    <!-- Footer Start -->
-    <div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
-        <div class="row g-5">
-            <div class="col-lg-6 pe-lg-5">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
-                </a>
-                <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+    <!-- Footer Start --> 
+<div class="footer container-fluid position-relative text-white-50 py-6 px-5"
+     style="background: linear-gradient(135deg, #3E747B, #528C94, #A0DEE3);">
+     
+    <div class="row g-5">
+        <div class="col-lg-6 pe-lg-5">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 display-4 text-uppercase text-white">
+                    <i class="bi bi-building text-primary me-2"></i>WEB DESA
+                </h1>
+            </a>
+            <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum
+               diam sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+            <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
+            <p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p>
+            <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <div class="col-lg-6 ps-lg-5">
-                <div class="row g-5">
-                    <div class="col-sm-6">
-                        <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
-                        </div>
+        </div>
+
+        <div class="col-lg-6 ps-lg-5">
+            <div class="row g-5">
+                <div class="col-sm-6">
+                    <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
-                    <div class="col-sm-6">
-                        <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
-                        </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
-                    <div class="col-sm-12">
-                        <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
-                        <div class="w-100">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-light" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
-                            </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-light"
+                                   style="padding: 20px 30px;" placeholder="Your Email Address">
+                            <button class="btn btn-primary px-4">Sign Up</button>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
-            </div>
-            <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
-                <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
-                <p class="mb-0">Distributed by <a class="text-dark" href="https://themewagon.com">ThemeWagon</a></p>
-            </div>
+</div>
+
+<div class="container-fluid bg-dark text-white border-top border-primary px-0">
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="py-4 px-5 text-center text-md-start">
+            <p class="mb-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+        </div>
+
+        <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
+            <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
+            <p class="mb-0">Distributed by <a class="text-dark" href="https://themewagon.com">ThemeWagon</a></p>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
 
     <!-- Back to Top -->

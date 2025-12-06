@@ -53,18 +53,5 @@ class PpidController extends Controller
     }
 
 
-    // ================================
-    //          DOWNLOAD DOKUMEN
-    // ================================
-    public function downloadDokumen($id)
-    {
-        // Contoh: file disimpan di public/uploads/ppid/dokumen/
-        $filePath = public_path("uploads/ppid/dokumen/dokumen_" . $id . ".pdf");
-
-        if (!file_exists($filePath)) {
-            abort(404, "File dokumen tidak ditemukan");
-        }
-
-        return response()->download($filePath);
-    }
+    
 }

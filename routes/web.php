@@ -5,6 +5,7 @@ use App\Http\Controllers\PpidController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\KotakSaranController;
 use App\Http\Controllers\SuratController; // <-- Tambahan
 
 // ==================================================
@@ -15,23 +16,18 @@ Route::prefix('/')->group(function () {
     Route::get('/', fn() => view('page.frontend.profiledesa.index'));
     Route::get('/profil', fn() => view('page.frontend.profiledesa.profil'));
     Route::get('/galery', fn() => view('page.frontend.galery.galeryindex'));
-    Route::get('/berita', [BeritaController::class, 'frontend'])->name('berita.frontend');
-    Route::get('/produk', [App\Http\Controllers\ProdukController::class, 'frontend'])->name('produkdesa');
-
     Route::get('/ppid', fn() => view('page.frontend.ppid.ppiddesa'));
     Route::get('/berkas', fn() => view('page.frontend.ppid.berkas'));
     Route::get('/dokumen', fn() => view('page.frontend.ppid.dokumen'));
-    Route::get('/surat', fn() => view('page.frontend.ppid.surat'));
     Route::get('/hukum', fn() => view('page.frontend.ppid.hukum'));
+    Route::get('/kotaksaran', fn() => view('page.frontend.ppid.kotaksaran'));
+    Route::post('/kotaksaran/kirim', [KotakSaranController::class, 'kirim']);
+    Route::get('/berita', [BeritaController::class, 'frontend'])->name('berita.frontend');
+    Route::get('/berita/{id}', [BeritaController::class, 'showDetailFE'])->name('berita.detail');   // <--- DITAMBAHKAN
+    Route::get('/produk', [App\Http\Controllers\ProdukController::class, 'frontend'])->name('produkdesa');
 });
 
 
-// ==================================================
-// DOWNLOAD SURAT (BARU DITAMBAHKAN)
-// ==================================================
-
-Route::get('/surat/download', [SuratController::class, 'downloadSurat'])
-    ->name('surat.download');
 
 
 // ==================================================
@@ -87,6 +83,16 @@ Route::prefix('ppidback')->group(function () {
     Route::delete('/{id}', [PpidController::class, 'destroy'])->name('ppid.destroy');
 });
 
+// ==========================
+//   ROUTE SARAN & PENGAJUAN
+// ==========================
+Route::get('/ppid/saran', [App\Http\Controllers\PpidController::class, 'saran'])
+    ->name('ppid.saran');
+
+Route::get('/ppid/pengajuan', [App\Http\Controllers\PpidController::class, 'pengajuan'])
+    ->name('ppid.pengajuan');
+
+
 
 // ==================================================
 // CRUD PRODUK BACKEND
@@ -109,11 +115,3 @@ Route::post('/produkback/update/{id}', [ProdukController::class, 'update'])->nam
 Route::delete('/produkback/delete/{id}', [ProdukController::class, 'destroy'])->name('produk.delete');
 });
 
-// ==================================================
-// DOWNLOAD BERKAS & DOKUMEN PPID
-// ==================================================
-Route::get('/ppid/berkas/download/{id}', [PpidController::class, 'downloadBerkas'])
-    ->name('ppid.berkas.download');
-
-Route::get('/ppid/dokumen/download/{id}', [PpidController::class, 'downloadDokumen'])
-    ->name('ppid.dokumen.download');

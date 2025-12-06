@@ -50,7 +50,7 @@ class BeritaController extends Controller
     }
 
     // ========================
-    // DETAIL BERITA
+    // DETAIL BERITA BACKEND
     // ========================
     public function show($id)
     {
@@ -111,12 +111,20 @@ class BeritaController extends Controller
     }
 
     // ==============================================================
-    // FRONTEND — MENGIRIM DATA KE beritadesa.blade.php (TAMBAHAN)
+    // FRONTEND — KIRIM DATA KE beritadesa.blade.php
     // ==============================================================
     public function frontend()
     {
         $berita = Berita::latest()->get();
         return view('page.frontend.berita.beritadesa', compact('berita'));
     }
-}
 
+    // ==============================================================
+    // FRONTEND — DETAIL BERITA (BARU DITAMBAHKAN)
+    // ==============================================================
+    public function showDetailFE($id)
+    {
+        $berita = Berita::findOrFail($id);
+        return view('page.frontend.berita.detail', compact('berita'));
+    }
+}

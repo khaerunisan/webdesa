@@ -230,7 +230,10 @@
             dan/atau pelayanan informasi di badan publik.
         </p>
 
-        <button class="btn">DASAR HUKUM PPID</button>
+            <a href="/dasar-hukum-ppid" class="btn">DASAR HUKUM PPID</a>
+            <a href="/kotaksaran" class="btn">KOTAK SARAN</a>
+
+
     </div>
 
 
@@ -283,9 +286,7 @@
                     🔎 Lihat Berkas
                 </a>
                 
-                <a href="URL_UNTUK_FILE_YANG_DIUNDUH" class="btn-link btn-gray" download="nama_file_surat.pdf">
-                    ⬇ Unduh
-                </a>
+               
             </div>
         </div>
 
@@ -299,9 +300,7 @@
                         🔎 Lihat Berkas
                     </a>
                     
-                    <a href="URL_UNTUK_FILE_YANG_DIUNDUH" class="btn-link btn-gray" download="nama_file_surat.pdf">
-                        ⬇ Unduh
-                    </a>
+                    
             </div>
         </div>
 
@@ -315,9 +314,7 @@
                         🔎 Lihat Berkas
                     </a>
                     
-                    <a href="URL_UNTUK_FILE_YANG_DIUNDUH" class="btn-link btn-gray" download="nama_file_surat.pdf">
-                        ⬇ Unduh
-                    </a>
+                   
             </div>
         </div>
     </div>

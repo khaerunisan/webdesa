@@ -113,33 +113,35 @@
 
     <div class="row g-5">
 
-        <!-- LOOP BERITA DARI BACKEND -->
+       <!-- LOOP BERITA DARI BACKEND -->
         @foreach ($berita as $item)
-        <div class="col-lg-4 col-md-6">
-            <div class="bg-light card-box">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light card-box">
 
-                <img class="card-image" src="{{ asset('storage/' . $item->gambar) }}" alt="">
+                    <img class="card-image" src="{{ asset('storage/' . $item->gambar) }}" alt="">
 
-                <div class="p-4">
+                    <div class="p-4">
 
-                    <span class="ms-3 mb-3">
-                        <i class="far fa-calendar-alt text-primary me-2"></i>
-                        {{ \Carbon\Carbon::parse($item->tanggal)->format('d F Y') }}
-                    </span>
+                        <span class="ms-3 mb-3">
+                            <i class="far fa-calendar-alt text-primary me-2"></i>
+                            {{ \Carbon\Carbon::parse($item->tanggal)->format('d F Y') }}
+                        </span>
 
-                    <h4 class="mb-3">{{ $item->judul }}</h4>
+                        <h4 class="mb-3">{{ $item->judul }}</h4>
 
-                    <p>{{ Str::limit($item->deskripsi, 120) }}</p>
+                        <p>{{ Str::limit($item->deskripsi, 120) }}</p>
 
-                    <a href="{{ route('berita.show', $item->id) }}" class="btn btn-primary mt-auto">
-                        Baca Selengkapnya
-                    </a>
+                        <!-- LINK SUDAH DIUBAH KE FRONTEND -->
+                        <a href="/berita/{{ $item->id }}" class="btn btn-primary mt-auto">
+                            Baca Selengkapnya
+                        </a>
 
+                    </div>
                 </div>
             </div>
-        </div>
         @endforeach
         <!-- END LOOP -->
+
 
     </div>
 

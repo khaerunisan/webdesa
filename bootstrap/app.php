@@ -11,7 +11,15 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+
+        // Alias middleware
+        $middleware->alias([
+            'checkLogin' => \App\Http\Middleware\CheckLogin::class,
+        ]);
+
+        // JANGAN daftar CheckLogin disini lagi!
+        // Biarkan group 'web' default bawaan Laravel,
+        // jangan ditambahin middleware custom.
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

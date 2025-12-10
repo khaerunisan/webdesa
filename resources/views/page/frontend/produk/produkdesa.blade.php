@@ -35,7 +35,7 @@
 <div class="container-fluid py-6 px-5">
 
     <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-        <h1 class="display-5 text-uppercase mb-4"> LAYANAN PROMOSI PRODUK UMKM DESA</h1>
+        <h1 class="display-5 text-uppercase mb-4">LAYANAN PROMOSI PRODUK UMKM DESA</h1>
         <h4>Layanan Promosi UMKM desa disediakan untuk membantu pelaku usaha memperluas pemasaran meningkatkan daya saing.</h4>
     </div>
 
@@ -46,13 +46,13 @@
             <div class="bg-light card-box">
 
                 <!-- ============================= -->
-                <!-- LINK DETAIL DIMULAI DI SINI -->
+                <!-- LINK DETAIL FRONTEND (FIX) -->
                 <!-- ============================= -->
-                <a href="{{ route('produk.show', $item->id) }}" style="text-decoration:none; color:inherit;">
+                <a href="{{ route('produk.detail.fe', $item->id) }}" style="text-decoration:none; color:inherit;">
 
                     {{-- FOTO PRODUK --}}
-                    <img class="card-image" 
-                         src="{{ asset('uploads/produk/' . $item->gambar) }}" 
+                    <img class="card-image"
+                         src="{{ asset('uploads/produk/' . $item->gambar) }}"
                          alt="{{ $item->nama_produk }}">
 
                     <div class="p-4">
@@ -72,7 +72,7 @@
 
                 </a>
                 <!-- ============================= -->
-                <!-- LINK DETAIL BERAKHIR DI SINI -->
+                <!-- LINK DETAIL BERAKHIR -->
                 <!-- ============================= -->
 
             </div>

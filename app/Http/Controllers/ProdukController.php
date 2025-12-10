@@ -9,9 +9,7 @@ class ProdukController extends Controller
 {
     public function index()
     {
-        // Ambil semua produk dari tabel "produk"
         $produk = DB::table('produk')->get();
-
         return view('page.backend.produk.produkback', compact('produk'));
     }
 
@@ -82,16 +80,29 @@ class ProdukController extends Controller
     public function destroy($id)
     {
         DB::table('produk')->where('id', $id)->delete();
-
         return redirect()->route('produkback')->with('success', 'Produk berhasil dihapus');
     }
 
     // ================================
-    // FRONTEND PRODUK DESA
+    // FRONTEND PRODUK DESA (ASLI)
     // ================================
     public function frontend()
     {
         $produk = DB::table('produk')->get();
         return view('page.frontend.produk.produkdesa', compact('produk'));
+    }
+
+    // ================================
+    // ✅ DETAIL PRODUK FRONTEND (TAMBAHAN)
+    // ================================
+    public function detailFrontend($id)
+    {
+        $produk = DB::table('produk')->where('id', $id)->first();
+
+        if (!$produk) {
+            abort(404);
+        }
+
+        return view('page.frontend.produk.detail', compact('produk'));
     }
 }

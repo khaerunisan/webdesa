@@ -121,7 +121,6 @@
             DAN/ATAU PELAYANAN INFORMASI DI BADAN PUBLIK.
         </p>
 
-         <button class="btn">DASAR HUKUM PPID</button>
          
     </div>
 
@@ -175,7 +174,6 @@
             <span class="surat-info">📄 Rencana Kerja Pemerintah Desa</span><br>
             <span class="surat-info">📅 Jumat, 8 Agustus 2025</span><br>
             <a href="surat" class="btn-blue">LIHAT BERKAS</a>
-            <a href="#" class="btn-blue">UNDUH</a>
         </div>
 
         <!-- SURAT 2 -->
@@ -184,7 +182,6 @@
             <span class="surat-info">📄 Data Administrasi Penduduk</span><br>
             <span class="surat-info">📅 Senin, 12 Agustus 2025</span><br>
             <a href="berkas" class="btn-blue">LIHAT BERKAS</a>
-            <a href="#" class="btn-blue">UNDUH</a>
         </div>
 
         <!-- SURAT 3 -->
@@ -193,7 +190,6 @@
             <span class="surat-info">📄 Pendataan Pelaku UMKM Desa</span><br>
             <span class="surat-info">📅 Jumat, 08 Agustus 2025</span><br>
             <a href="dokumen" class="btn-blue">LIHAT BERKAS</a>
-            <a href="#" class="btn-blue">UNDUH</a>
         </div>
 
     </div>

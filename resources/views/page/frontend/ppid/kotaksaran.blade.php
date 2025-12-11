@@ -72,6 +72,12 @@
     <h1>KOTAK SARAN</h1>
 
     <!-- BENAR: routing tanpa minus -->
+    @if(session('success'))
+        <p style="color: green; text-align:center;">
+            {{ session('success') }}
+        </p>
+    @endif
+
     <form action="/kotaksaran/kirim" method="POST">
         @csrf
 

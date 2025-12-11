@@ -8,7 +8,7 @@ return new class extends Migration
 {
    public function up()
 {
-    Schema::create('kotaksaran', function (Blueprint $table) {
+    Schema::create('kotak_saran', function (Blueprint $table) {
         $table->id();
         $table->string('nama')->nullable();
         $table->string('email')->nullable();
@@ -16,5 +16,6 @@ return new class extends Migration
         $table->timestamps();
     });
 }
+
 
 };

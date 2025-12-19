@@ -58,12 +58,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="index.html" class="nav-item nav-link ">Home</a>
                 <a href="profil" class="nav-item nav-link">Profile Desa</a>
                 <a href="berita" class="nav-item nav-link">Berita</a>
 
                 <div class="nav-item dropdown">
-                    <a href="produk" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produk</a>
+                    <a href="produk" class="nav-link " data-bs-toggle="dropdown">Produk</a>
                     <div class="dropdown-menu m-0">
                         <a href="project.html" class="dropdown-item">PPID</a>
                         <a href="team.html" class="dropdown-item">The Team</a>
@@ -83,7 +83,7 @@
 
 <style>
     .navbar {
-        background: #0c1a33;
+        background: #33270c;
         width: 100%;
         padding: 12px 40px;
         display: flex;

@@ -19,6 +19,7 @@ Route::prefix('/')->group(function () {
     Route::get('/dokumen', fn() => view('page.frontend.ppid.dokumen'));
     Route::get('/hukum', fn() => view('page.frontend.ppid.hukum'));
     Route::get('/kotaksaran', fn() => view('page.frontend.ppid.kotaksaran'));
+
     Route::post('/kotaksaran/kirim', [KotakSaranController::class, 'kirim']);
 
     Route::get('/berita', [BeritaController::class, 'frontend'])->name('berita.frontend');
@@ -29,19 +30,22 @@ Route::prefix('/')->group(function () {
 
 });
 
-// ==================================================
-// BACKEND LOGIN (TANPA MIDDLEWARE!!)
-// ==================================================
-Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
-Route::post('/login', [LoginController::class, 'loginProcess'])->name('login.process');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+// LOGIN (TIDAK DI DALAM checkLogin) // 
 
-// ==================================================
-// BACKEND (WAJIB LOGIN)
-// ==================================================
-Route::middleware('checkLogin')->group(function () {
+    Route::get('/login', [LoginController::class, 'showLogin'])->name('login'); 
+    Route::post('/login', [LoginController::class, 'loginProcess'])->name('login.process');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    // BACKEND (WAJIB LOGIN)
+
+    Route::middleware('checkLogin')->group(function () {
 
     Route::get('/index', fn() => view('page.backend.admin.index'))->name('dashboard');
+
+        Route::get('/admin/kotaksaran', [KotakSaranController::class, 'saranback']);
+        Route::get('/admin/kotaksaran/dibaca/{id}', [KotakSaranController::class, 'dibaca']);
+        Route::get('/admin/kotaksaran/hapus/{id}', [KotakSaranController::class, 'hapus']);
+
 
     // CRUD Berita
     Route::prefix('beritaback')->group(function () {

@@ -1,3 +1,10 @@
+@php
+    if (!session('isLogin')) {
+        header('Location: ' . route('login'));
+        exit;
+    }
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +70,13 @@
                     <a href="beritaback" class="nav-item nav-link" ><i class="fa fa-laptop me-2"></i>BERITA</a>
                     <a href="produkback" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Produk UMKM</a>
                     <a href="ppidback" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>PPID</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>LOGOUT</a>
+                    <a href="admin/kotaksaran" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>KOTAK SARAN</a>
+                    <a href="{{ route('logout') }}"
+                        class="nav-item nav-link"
+                        onclick="return confirm('Yakin ingin logout?')">
+                        <i class="fa fa-table me-2"></i>LOGOUT
+                     </a>
+
                     
                     </div>
                 </div>
@@ -159,16 +172,6 @@
                     </div>
                 </div>
 
-                <!-- Ringkasan Cepat -->
-                <div class="bg-light p-4 rounded mb-4" style="color:#000;">
-                    <h5 class="mb-3" style="color:#000;">Ringkasan Cepat</h5>
-                    <ul style="font-size:14px; color:#000;">
-                        <li>Ada 5 berita yang belum dipublikasikan</li>
-                        <li>3 produk menunggu verifikasi</li>
-                        <li>User baru minggu ini: 27</li>
-                        <li>Sistem berjalan normal ✓</li>
-                    </ul>
-                </div>
 
                 <!-- Data Terbaru -->
                 <div class="bg-light p-4 rounded" style="color:#000;">

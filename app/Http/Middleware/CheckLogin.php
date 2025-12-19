@@ -9,16 +9,15 @@ class CheckLogin
 {
     public function handle(Request $request, Closure $next)
     {
-        // Jangan cek middleware untuk halaman login & logout
+        // Lewati halaman login & proses login
         if (
             $request->routeIs('login') ||
-            $request->routeIs('login.process') ||
-            $request->routeIs('logout')
+            $request->routeIs('login.process')
         ) {
             return $next($request);
         }
 
-        // Kalau belum login, arahkan ke login
+        // Jika belum login → lempar ke login
         if (!$request->session()->has('isLogin')) {
             return redirect()->route('login');
         }

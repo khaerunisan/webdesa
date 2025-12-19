@@ -12,14 +12,24 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
 
-        // Alias middleware
+        // =====================================================
+        // GROUP WEB WAJIB → AGAR SESSION & LOGIN BERFUNGSI
+        // =====================================================
+        $middleware->group('web', [
+            \Illuminate\Cookie\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ]);
+
+        // =====================================================
+        // ALIAS MIDDLEWARE
+        // =====================================================
         $middleware->alias([
             'checkLogin' => \App\Http\Middleware\CheckLogin::class,
         ]);
-
-        // JANGAN daftar CheckLogin disini lagi!
-        // Biarkan group 'web' default bawaan Laravel,
-        // jangan ditambahin middleware custom.
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

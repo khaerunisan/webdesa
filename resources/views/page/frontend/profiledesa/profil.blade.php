@@ -16,145 +16,167 @@
 
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            background-color: #e8b6b6;
-        }
+            <style>
+                body {
+                    margin: 0;
+                    background-color: #ffffff; /* BACKGROUND PUTIH */
+                }
 
-        /* --- CONTAINER UTAMA (Digunakan untuk Lokasi dan Sejarah) --- */
-        .main-content-container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 40px auto; /* Memberi jarak atas dan bawah antar container */
-            padding: 40px;
-            background: white;
-            border-radius: 10px;
-            border: 1px solid #d0d0d0;
-        }
+                /* === GRADIENT SESUAI WARNA YANG DIMINTA === */
+                :root {
+                    --biru-gradient: linear-gradient(
+                        135deg,
+                        #86A8D6 0%,   /* biru lembut */
+                        #EAFAFD 100%  /* biru sangat terang */
+                    );
+                }
 
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #c26b6b;
-            margin-bottom: 30px;
-        }
+                /* --- CONTAINER UTAMA (Lokasi & Sejarah) --- */
+                .main-content-container {
+                    width: 90%;
+                    max-width: 1100px;
+                    margin: 40px auto;
+                    padding: 40px;
+                    background: var(--biru-gradient);
+                    border-radius: 10px;
+                    border: 1px solid #d0d0d0;
+                    color: #000000; /* TEKS HITAM */
+                }
 
-        /* --- SEJARAH DESA (di dalam main-content-container) --- */
-        .sejarah-img {
-            width: 60%;
-            display: block;
-            margin: 0 auto 30px auto;
-            border-radius: 8px;
-        }
+                .section-title {
+                    text-align: center;
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #000000;
+                    margin-bottom: 30px;
+                }
 
-        .sejarah-text {
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 0;
-        }
+                /* --- SEJARAH DESA --- */
+                .sejarah-img {
+                    width: 60%;
+                    display: block;
+                    margin: 0 auto 30px auto;
+                    border-radius: 8px;
+                }
 
-        /* --- LOKASI DESA (di dalam main-content-container) --- */
-        .lokasi-desa-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: flex-start;
-        }
+                .sejarah-text {
+                    font-size: 17px;
+                    line-height: 1.8;
+                    margin-bottom: 0;
+                    color: #000000;
+                }
 
-        .lokasi-info {
-            flex: 1;
-            min-width: 300px;
-        }
+                /* --- LOKASI DESA --- */
+                .lokasi-desa-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    align-items: flex-start;
+                }
 
-        .lokasi-info ul {
-            padding-left: 20px;
-        }
-        
-        .lokasi-info ul li {
-            margin-bottom: 5px;
-        }
+                .lokasi-info {
+                    flex: 1;
+                    min-width: 300px;
+                    color: #000000;
+                }
 
-        .lokasi-map-container {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
+                .lokasi-info ul {
+                    padding-left: 20px;
+                }
 
-        .lokasi-map {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
-        .lokasi-info p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
+                .lokasi-info ul li {
+                    margin-bottom: 5px;
+                    color: #000000;
+                }
+
+                .lokasi-map-container {
+                    flex: 1;
+                    min-width: 300px;
+                    text-align: center;
+                }
+
+                .lokasi-map {
+                    max-width: 100%;
+                    height: auto;
+                    border: 1px solid #000000;
+                    border-radius: 5px;
+                }
+
+                .lokasi-info p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                    color: #000000;
+                }
+
+                /* --- VISI MISI --- */
+                .visi-misi-box {
+                    width: 80%;
+                    margin: 40px auto;
+                    background: var(--biru-gradient);
+                    padding: 40px;
+                    border-radius: 10px;
+                    color: #000000;
+                }
+
+                .visi-misi-box h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    color: #000000;
+                }
+
+                .visi-misi-box p,
+                .visi-misi-box li {
+                    font-size: 16px;
+                    line-height: 1.7;
+                    color: #000000;
+                }
+
+                /* --- BAGAN --- */
+                .bagan-container {
+                    width: 90%;
+                    max-width: 1300px;
+                    margin: 60px auto;
+                    background: var(--biru-gradient);
+                    padding: 50px 20px;
+                    border-radius: 10px;
+                    text-align: center;
+                    color: #000000;
+                }
+
+                .bagan-row {
+                    display: flex;
+                    gap: 40px;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+
+                .bagan-box {
+                    width: 480px;
+                    padding: 25px;
+                    background: var(--biru-gradient);
+                    border-radius: 10px;
+                    border: 1px solid #ccc;
+                    color: #000000;
+                }
+
+                .bagan-box img {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+
+                @media (max-width: 768px) {
+                    .lokasi-desa-content {
+                        flex-direction: column;
+                    }
+                    .lokasi-info,
+                    .lokasi-map-container {
+                        min-width: 100%;
+                    }
+                }
+            </style>
 
 
-        /* BOX VISI MISI */
-        .visi-misi-box {
-            width: 80%;
-            margin: 40px auto;
-            background-color: #dcdcdc;
-            padding: 40px;
-            border-radius: 10px;
-        }
 
-        .visi-misi-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .visi-misi-box p,
-        .visi-misi-box li {
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        /* BAGAN */
-        .bagan-container {
-            width: 90%;
-            max-width: 1300px;
-            margin: 60px auto;
-            background: white;
-            padding: 50px 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .bagan-row {
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .bagan-box {
-            width: 480px;
-            padding: 25px;
-            background: #fff;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-        }
-
-        .bagan-box img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        
-        @media (max-width: 768px) {
-            .lokasi-desa-content {
-                flex-direction: column;
-            }
-            .lokasi-info, .lokasi-map-container {
-                min-width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>

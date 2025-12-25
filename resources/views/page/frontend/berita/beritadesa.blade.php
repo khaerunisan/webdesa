@@ -7,27 +7,50 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- CSS FOTO SERAGAM -->
-    <style>
-        .card-image {
-            width: 100%;
-            height: 250px; /* Semua foto sama */
-            object-fit: cover;
-            border-radius: 5px;
-        }
+            <style>
+                .card-image {
+                    width: 100%;
+                    height: 250px; /* Semua foto sama */
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
 
-        .card-box {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+                .card-box {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
 
-        .card-box .p-4 {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
+                .card-box .p-4 {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                /* === BUTTON "BACA SELENGKAPNYA" GRADIENT === */
+                .card-box .btn-primary {
+                    background: linear-gradient(
+                        135deg,
+                        #86A8D6 0%,
+                        #EAFAFD 100%
+                    );
+                    border: none;
+                    color: #000000; /* teks hitam */
+                    font-weight: 600;
+                }
+
+                /* Hover biar lebih hidup */
+                .card-box .btn-primary:hover {
+                    background: linear-gradient(
+                        135deg,
+                        #6f97cc 0%,
+                        #dff6fa 100%
+                    );
+                    color: #000000;
+                }
+            </style>
+
 
     <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
 

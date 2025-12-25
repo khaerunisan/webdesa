@@ -123,14 +123,14 @@
         }
 
         h1 {
-            color: #c72f3c;
+            color: black;
             font-size: 35px;
             margin-top: 25px;
             margin-bottom: 10px;
         }
 
         .subtitle {
-            color: #c72f3c;
+            color: black;
             font-size: 14px;
             margin-top: -5px;
             margin-bottom: 20px;
@@ -159,7 +159,7 @@
         }
 
         .section-title {
-            color: #2d7f4e;
+            color: black;
             font-weight: bold;
             font-size: 18px;
             margin-top: 25px;
@@ -230,8 +230,6 @@
             dan/atau pelayanan informasi di badan publik.
         </p>
 
-            <a href="/dasar-hukum-ppid" class="btn">DASAR HUKUM PPID</a>
-            <a href="/kotaksaran" class="btn">KOTAK SARAN</a>
 
 
     </div>

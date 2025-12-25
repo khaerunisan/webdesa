@@ -6,30 +6,35 @@
     <title>GALERI DESA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <style>
-        .gallery-img {
-            width: 100%;
-            height: 420px; /* 🔽 sedikit diperkecil */
-            object-fit: cover;
-            border-radius: 12px;
-            cursor: pointer;
-        }
+        <style>
+            .gallery-img {
+                width: 100%;
+                height: 420px; /* 🔽 sedikit diperkecil */
+                object-fit: cover;
+                border-radius: 12px;
+                cursor: pointer;
+            }
 
-        /* 🔵 KOTAK BERITA (SEDANG & TIDAK NYATU) */
-        .container-fluid.py-6.px-5 > .row {
-            background-color: #0d6efd;
-            border-radius: 18px;
-            padding: 20px;           /* 🔽 kotak lebih kecil */
-            margin-bottom: 70px;     /* ✅ jarak antar kotak jauh */
-            overflow: hidden;
-        }
+            /* 🔵 KOTAK BERITA (GRADASI BIRU SESUAI WARNA) */
+            .container-fluid.py-6.px-5 > .row {
+                background: linear-gradient(
+                    135deg,
+                    #6c9adb 0%,
+                    #EAFAFD 100%
+                );
+                border-radius: 18px;
+                padding: 20px;           
+                margin-bottom: 70px;     
+                overflow: hidden;
+            }
 
-        /* 📝 Teks putih */
-        .container-fluid.py-6.px-5 > .row h4,
-        .container-fluid.py-6.px-5 > .row p {
-            color: #ffffff;
-        }
-    </style>
+            /* 📝 Teks putih */
+            .container-fluid.py-6.px-5 > .row h4,
+            .container-fluid.py-6.px-5 > .row p {
+                color: black;
+            }
+        </style>
+
 
     <!-- Favicon -->
     <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
@@ -54,16 +59,62 @@
 
 <body>
 
-<!-- Navbar -->
+<!-- Navbar Start -->
 <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
     <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
         <a href="index.html" class="navbar-brand">
             <h1 class="m-0 display-4 text-uppercase text-white">
-                <i class="bi bi-building text-primary me-2"></i>WEB DESA
-            </h1>
+                <i class="bi bi-building text-primary me-2"></i>WEB DESA </h1>
         </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="profil" class="nav-item nav-link">Profile Desa</a>
+                <a href="berita" class="nav-item nav-link">Berita</a>
+
+                <div class="nav-item dropdown">
+                    <a href="produk" class="nav-link " data-bs-toggle="dropdown">Produk</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="project.html" class="dropdown-item">PPID</a>
+                        <a href="team.html" class="dropdown-item">The Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                    </div>
+                </div>
+
+                <a href="galery" class="nav-item nav-link">Galery</a>
+                <a href="ppid" class="nav-item nav-link ">PPID </a>
+            </div>
+        </div>
     </nav>
 </div>
+<!-- Navbar End -->
+
+<style>
+    .navbar {
+        background: #33270c;
+        width: 100%;
+        padding: 12px 40px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    .navbar a {
+        color: #c7c7c7;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .navbar a.active {
+        color: #ff7d7d;
+        font-weight: bold;
+    }
+</style>
 
 <!-- Galeri -->
 <div class="container-fluid py-6 px-5">
@@ -83,10 +134,10 @@
         </div>
         <div class="col-lg-6">
             <h4 class="text-uppercase mb-3">
-                Pentingnya Partisipasi Warga Dalam Musyawarah Desa
+                Warga sedang melaksanakan musyawarah desa
             </h4>
             <p style="font-size: 24px;">
-                Artikel ini akan membahas tentang peran serta aktif masyarakat dalam setiap pengambilan keputusan penting di desa.
+               Warga sedang melaksanakan musyawarah desa di rumah pak RT untuk yang di selenggrakan agar desa makin rukun dan saling terjaga.
             </p>
         </div>
     </div>
@@ -100,10 +151,10 @@
         </div>
         <div class="col-lg-6">
             <h4 class="text-uppercase mb-3">
-                Penyelenggaraan Kegiatan Keagamaan dan Pendidikan di Lingkungan Desa
+                Warga sedang melaksanakan rapat desa
             </h4>
             <p style="font-size: 24px;">
-                Fokus artikel ini adalah inisiatif desa dalam meningkatkan mutu keagamaan dan pendidikan anak-anak.
+                Warga sedang melaksanakan rapat desa untuk kegiatan desa menjelang hari hari penting.
             </p>
         </div>
     </div>
@@ -117,10 +168,10 @@
         </div>
         <div class="col-lg-6">
             <h4 class="text-uppercase mb-3">
-                Transparansi dan Akuntabilitas Pengelolaan Dana Desa
+                Warga sedang melakukan posyandu balita dan lansia
             </h4>
             <p style="font-size: 24px;">
-                Artikel ini menguraikan pentingnya pengelolaan dana desa yang terbuka dan dapat dipertanggungjawabkan.
+              Warga sedang melakukan posyandu balita secara bersama-sama di gedung aula desa untuk mengetahui perkembangan balita di desa dan menhaga kesehatannya.
             </p>
         </div>
     </div>
@@ -134,10 +185,10 @@
         </div>
         <div class="col-lg-6">
             <h4 class="text-uppercase mb-3">
-                Kolaborasi Antar Lembaga Dalam Menjaga Keamanan
+                Warga sedang melakukan gotong royong membersihkan pemukiman bersama
             </h4>
             <p style="font-size: 24px;">
-                Artikel ini menyoroti kerjasama aparat keamanan, warga, dan pemerintah desa dalam menjaga ketertiban.
+                Warga sedang melakukan gotong royong membersihkan pemukiman warga dengan bersama-sama secara menyeluruh dan saling membantu.
             </p>
         </div>
     </div>

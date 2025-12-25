@@ -50,7 +50,7 @@
     }
 
     .btn-tambah {
-        background: #87c9ff;
+        background: #75a4ca ;
         padding: 8px 12px;
         color: black;
         text-decoration: none;
@@ -139,18 +139,8 @@
         <input class="form-control bg-dark border-0" type="search" placeholder="Search">
     </form>
     <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                <i class="fa fa-envelope me-lg-2"></i>
-                <span class="d-none d-lg-inline-flex">Message</span>
-            </a>
-        </div>
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <i class="fa fa-bell me-lg-2"></i>
-                <span class="d-none d-lg-inline-flex">Notification</span>
-            </a>
-        </div>
+        
+       
        
         </div>
     </div>

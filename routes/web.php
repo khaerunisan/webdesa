@@ -2,15 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PpidController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KotakSaranController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Middleware\VisitorCounter;
+
 
 // ==================================================
 // FRONTEND
 // ==================================================
-Route::prefix('/')->group(function () {
+Route::prefix('/')->middleware(VisitorCounter::class)->group(function () {
     Route::get('/', fn() => view('page.frontend.profiledesa.index'));
     Route::get('/profil', fn() => view('page.frontend.profiledesa.profil'));
     Route::get('/galery', fn() => view('page.frontend.galery.galeryindex'));
@@ -27,8 +30,9 @@ Route::prefix('/')->group(function () {
 
     Route::get('/produk', [ProdukController::class, 'frontend'])->name('produkdesa');
     Route::get('/produk/{id}', [ProdukController::class, 'detailFrontend'])->name('produk.detail.fe');
-
+    
 });
+
 
 // LOGIN (TIDAK DI DALAM checkLogin) // 
 
@@ -40,7 +44,9 @@ Route::prefix('/')->group(function () {
 
     Route::middleware('checkLogin')->group(function () {
 
-    Route::get('/index', fn() => view('page.backend.admin.index'))->name('dashboard');
+   Route::get('/index', [AdminDashboardController::class, 'index'])
+    ->name('dashboard');
+
 
         Route::get('/admin/kotaksaran', [KotakSaranController::class, 'saranback']);
         Route::get('/admin/kotaksaran/dibaca/{id}', [KotakSaranController::class, 'dibaca']);
@@ -81,6 +87,9 @@ Route::prefix('/')->group(function () {
         Route::get('/edit/{id}', [ProdukController::class, 'edit'])->name('produk.edit');
         Route::post('/update/{id}', [ProdukController::class, 'update'])->name('produk.update');
         Route::delete('/delete/{id}', [ProdukController::class, 'destroy'])->name('produk.delete');
+
+        Route::get('/admin', [AdminDashboardController::class, 'index'])
+    ->name('admin.index');
     });
 
 });

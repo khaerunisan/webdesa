@@ -137,7 +137,6 @@
 <div class="container-fluid bg-light py-6 px-5">
     <div class="text-center mx-auto mb-5" style="max-width: 600px;">
         <h1 class="display-5 text-uppercase mb-4">JELAJAHI DESA</h1>
-        <p>MELALUI WEBSITE INI ANDA DAPAT MENJELAJAHI SEGALA HAL YANG TERKAIT DENGAN DESA, ASPEK PEMERINTAHAN, PENDUDUK, DEMOGRAFI, POTENSI DESA, DAN JUGA BERITA TENTANG DESA.</p>
     </div>
     <div class="row g-5">
         
@@ -186,7 +185,7 @@
         </div>
         
         <div class="col-lg-4 col-md-6">
-             <a href="#" class="text-decoration-none d-flex flex-column align-items-center text-center">
+             <a href="/kotaksaran" class="text-decoration-none d-flex flex-column align-items-center text-center">
                 <div class="service-icon bg-white p-4 mb-3">
                     <i class="fa fa-4x fa-envelope text-primary"></i>
                 </div>

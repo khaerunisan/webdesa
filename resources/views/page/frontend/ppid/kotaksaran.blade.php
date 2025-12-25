@@ -69,7 +69,7 @@
 <body>
 
 <div class="container">
-    <h1>KOTAK SARAN</h1>
+    <h1>KOTAK SARAN DAN PENGADUAN</h1>
 
     <!-- BENAR: routing tanpa minus -->
     @if(session('success'))

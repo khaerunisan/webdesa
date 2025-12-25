@@ -17,7 +17,7 @@
     }
 
     .sidebar .navbar-nav .nav-link {
-        color: white;
+        color: rgb(255, 255, 255);
     }
 
     .sidebar .navbar-nav .nav-link:hover {

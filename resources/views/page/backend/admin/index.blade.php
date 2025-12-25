@@ -99,19 +99,10 @@
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                    </div>
-
+                    
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificatin</span>
-                        </a>
+                        
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">Profile updated</h6>
@@ -136,75 +127,104 @@
             <!-- Navbar End -->
 
 
-            <!-- Sale & Revenue Start -->
-   
-        <div class="container-fluid pt-4 px-4">
-            <div class="p-4 rounded" style="background:#cbb1ab;">
-                
-                <!-- 4 Kotak Statistik -->
-                <div class="row g-4 mb-4">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="rounded p-4 text-center" style="background:#f6e3a1; color:#000;">
-                            <h2 class="mb-0" style="color:#000;">120</h2>
-                            <p class="mb-0" style="color:#000;">Total User</p>
+        <!-- Sale & Revenue Start -->
+                <div class="container-fluid pt-4 px-4">
+
+                    <!-- JUDUL DASHBOARD -->
+                    <div class="bg-secondary rounded p-4 mb-4">
+                        <h4 class="text-primary mb-1">Dashboard Admin Website Desa</h4>
+                        <p class="mb-0">Pusat pengelolaan informasi, layanan publik, dan potensi desa</p>
+                    </div>
+
+                    <!-- STATISTIK UTAMA -->
+                    <div class="row g-4 mb-4">
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded p-4 text-center">
+                                <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">{{ $totalVisitor }}</h3>
+                                <p class="mb-0">Pengunjung Website</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded p-4 text-center">
+                                <i class="fa fa-newspaper fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">{{ $totalBerita }}</h3>
+                                <p class="mb-0">Berita Desa</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded p-4 text-center">
+                                <i class="fa fa-store fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">{{ $totalProduk }}</h3>
+                                <p class="mb-0">Produk UMKM</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded p-4 text-center">
+                                <i class="fa fa-file-alt fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">{{ $totalPPID }}</h3>
+                                <p class="mb-0">Dokumen PPID</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- INFORMASI SISTEM -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-12">
+                            <div class="bg-secondary rounded p-4">
+                                <h5 class="text-primary mb-3">Informasi Sistem</h5>
+                                <p style="text-align:justify;">
+                                    Dashboard ini digunakan oleh Admin Desa untuk mengelola seluruh
+                                    informasi dan layanan Website Desa, meliputi pengelolaan berita,
+                                    transparansi informasi publik (PPID), promosi produk UMKM,
+                                    serta menampung aspirasi masyarakat melalui kotak saran.
+                                    Sistem ini bertujuan meningkatkan pelayanan publik dan
+                                    keterbukaan informasi desa secara digital.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="rounded p-4 text-center" style="background:#ff60b8; color:#fff;">
-                            <h2 class="mb-0">45</h2>
-                            <p class="mb-0">Total Berita</p>
+                    <!-- DATA TERBARU -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="bg-secondary rounded p-4">
+                                <h5 class="text-primary mb-3">Data Terbaru</h5>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover text-center">
+                                        <thead>
+                                            <tr>
+                                                <th>Judul</th>
+                                                <th>Kategori</th>
+                                                <th>Tanggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($dataTerbaru as $item)
+                                            <tr>
+                                                <td>{{ $item->nama }}</td>
+                                                <td>{{ $item->kategori }}</td>
+                                                <td>{{ date('d F Y', strtotime($item->created_at)) }}</td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="rounded p-4 text-center" style="background:#a374c5; color:#fff;">
-                            <h2 class="mb-0">32</h2>
-                            <p class="mb-0">Total Produk</p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="rounded p-4 text-center" style="background:#75b9d6; color:#000;">
-                            <h2 class="mb-0">980</h2>
-                            <p class="mb-0">Total Kunjungan</p>
-                        </div>
-                    </div>
                 </div>
+        <!-- Sale & Revenue End -->
 
 
-                <!-- Data Terbaru -->
-                <div class="bg-light p-4 rounded" style="color:#000;">
-                    <h5 class="mb-3" style="color:#000;">Data Terbaru</h5>
-
-                    <table class="table table-bordered table-striped" style="font-size:14px; color:#000;">
-    <thead>
-        <tr>
-            <th style="color:#000;">Nama</th>
-            <th style="color:#000;">Kategori</th>
-            <th style="color:#000;">Tanggal</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="color:#000;">Musyawarah desa</td>
-            <td style="color:#000;">Berita</td>
-            <td style="color:#000;">20 Jan 2025</td>
-        </tr>
-        <tr>
-            <td style="color:#000;">Kopi jahe original</td>
-            <td style="color:#000;">Produk</td>
-            <td style="color:#000;">21 Jan 2024</td>
-        </tr>
-    </tbody>
-</table>
-
-                </div>
-
-            </div>
-        </div>
-
-            <!-- Sale & Revenue End -->
 
 
 

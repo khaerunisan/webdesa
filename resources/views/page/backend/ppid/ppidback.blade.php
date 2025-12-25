@@ -50,7 +50,7 @@
     }
 
     .btn-tambah {
-        background: #87c9ff;
+        background: black;
         padding: 8px 12px;
         color: black;
         text-decoration: none;
@@ -130,106 +130,106 @@
     </nav>
 </div>
 
-<style>
-    body {
-        background: #D28989;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+        <style>
+            body {
+                background: black;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
 
-    .page-wrapper {
-        width: 85%;
-        margin: 40px auto;
-    }
+            .page-wrapper {
+                width: 85%;
+                margin: 40px auto;
+            }
 
-    /* ===================== HEADER ===================== */
-    .header-bar {
-        width: 100%;
-        background: #4CB4A3; 
-        padding: 15px 25px;
-        color: white;
-        font-weight: bold;
-        font-size: 14px;
-        border-radius: 8px;
-        text-transform: uppercase;
-    }
+            /* ===================== HEADER ===================== */
+            .header-bar {
+                width: 100%;
+                background:  #75a4ca; 
+                padding: 15px 25px;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                border-radius: 8px;
+                text-transform: uppercase;
+            }
 
-    .header-links {
-        float: right;
-    }
+            .header-links {
+                float: right;
+            }
 
-    /* ===================== BOX ===================== */
-    .white-box {
-        background: #ffffff;
-        border-radius: 10px;
-        padding: 35px 40px;
-        border: 1px solid #ccc;
-        margin-top: 35px;
-    }
+            /* ===================== BOX ===================== */
+            .white-box {
+                background: #ffffff;
+                border-radius: 10px;
+                padding: 35px 40px;
+                border: 1px solid #ccc;
+                margin-top: 35px;
+            }
 
-    .section-title {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
-        color: #000;
-        margin-top: 10px;
-        margin-bottom: 30px;
-    }
+            .section-title {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+                color: #000;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
 
-    .ppid-title {
-        color: #C64646;
-        font-size: 32px;
-        font-weight: bold;
-    }
+            .ppid-title {
+                color: black;
+                font-size: 32px;
+                font-weight: bold;
+            }
 
-    .subtitle {
-        font-size: 14px;
-        color: #000;
-        margin-bottom: 25px;
-        margin-top: -10px;
-        line-height: 1.5;
-        font-weight: bold;
-    }
+            .subtitle {
+                font-size: 14px;
+                color: #000;
+                margin-bottom: 25px;
+                margin-top: -10px;
+                line-height: 1.5;
+                font-weight: bold;
+            }
 
-    .btn-blue {
-        background: #7AB0BD;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 10px;
-    }
+            .btn-blue {
+                background: #7AB0BD;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                display: inline-block;
+                margin-top: 10px;
+            }
 
-    .section-green {
-        color: #4CB4A3;
-        font-weight: bold;
-        margin-top: 25px;
-    }
+            .section-green {
+                color: black;
+                font-weight: bold;
+                margin-top: 25px;
+            }
 
-    /* ===================== SURAT BOX ===================== */
-    .surat-item {
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-        line-height: 1.6;
-        font-size: 16px;
-    }
+            /* ===================== SURAT BOX ===================== */
+            .surat-item {
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #ddd;
+                line-height: 1.6;
+                font-size: 16px;
+            }
 
-    .surat-title {
-        font-weight: bold;
-        font-size: 20px;
-        color: #000;
-    }
+            .surat-title {
+                font-weight: bold;
+                font-size: 20px;
+                color: #000;
+            }
 
-    .surat-info {
-        color: #555;
-        font-size: 14px;
-        margin-left: 5px;
-    }
-</style>
+            .surat-info {
+                color: #555;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        </style>
 
 
 

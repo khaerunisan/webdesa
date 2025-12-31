@@ -9,9 +9,9 @@
         top: 0;
         left: 0;
         height: 100vh;
-        width: 250px; /* Lebar sidebar */
+        width: 250px;
         background-color: #343a40;
-        padding-top: 56px; /* Tinggi navbar */
+        padding-top: 56px;
         overflow-y: auto;
         z-index: 100;
     }
@@ -24,25 +24,22 @@
         background-color: #495057;
     }
 
-    /* Navbar */
     .navbar.sticky-top {
         position: fixed;
         top: 0;
-        left: 250px; /* menyesuaikan sidebar */
+        left: 250px;
         right: 0;
         z-index: 101;
     }
 
-    /* Konten utama */
     .main-content {
-        margin-left: 250px; /* menyesuaikan sidebar */
-        margin-top: 56px; /* menyesuaikan navbar */
-        padding: 20px 40px; /* konten lebih luas */
+        margin-left: 250px;
+        margin-top: 56px;
+        padding: 20px 40px;
     }
 
-    /* Styling Card */
     .card-custom {
-        width: 100%; /* Memperlebar card supaya tidak sempit */
+        width: 100%;
         background: white;
         margin: 20px auto;
         padding: 40px;
@@ -122,7 +119,7 @@
             <a href="beritaback" class="nav-item nav-link"><i class="fa fa-th me-2"></i>BERITA</a>
             <a href="{{ route('produkback') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>PRODUK UMKM</a>
             <a href="ppidback" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>PPID</a>
-             <a href="admin/kotaksaran" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>KOTAK SARAN</a>
+            <a href="admin/kotaksaran" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>KOTAK SARAN</a>
             <a href="{{ route('logout') }}" class="nav-item nav-link" onclick="return confirm('Yakin ingin logout?')">
                 <i class="fa fa-table me-2"></i>LOGOUT
             </a>
@@ -130,47 +127,62 @@
     </nav>
 </div>
 
-<div class="header" 
-     style="background:#4a89c5; color:white; padding:18px 20px; font-size:22px; font-weight:bold;">
+<div class="header" style="background:#4a89c5; color:white; padding:18px 20px; font-size:22px; font-weight:bold;">
     Tambah Produk
 </div>
 
 <div class="container" style="background:#e6dede; padding:20px 40px;">
 
-    <form action="{{ route('produk.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+   <form action="{{ route('produk.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
 
-        <label style="font-weight:bold; color:#1a3b5d;">Nama Produk</label>
-        <input type="text" name="nama_produk" placeholder="Masukan Nama Produk" required
-               style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
+    <label style="font-weight:bold; color:#1a3b5d;">Nama Produk</label>
+    <input type="text" name="nama" placeholder="Masukan Nama Produk" required
+           style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
 
-        <label style="font-weight:bold; color:#1a3b5d;">Deskripsi Produk</label>
-        <textarea name="deskripsi" placeholder="Deskripsi Produk"
-                  style="width:100%; height:110px; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;"></textarea>
+    <!-- WAJIB ADA karena controller pakai nama_produk -->
+    <input type="hidden" name="nama_produk" id="nama_produk">
 
-        <label style="font-weight:bold; color:#1a3b5d;">Gambar</label>
-        <input type="file" name="gambar" required
-               style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
+    <label style="font-weight:bold; color:#1a3b5d;">Deskripsi Produk</label>
+    <textarea name="deskripsi" placeholder="Deskripsi Produk" required
+              style="width:100%; height:110px; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;"></textarea>
 
-        <label style="font-weight:bold; color:#1a3b5d;">Harga Produk</label>
-        <input type="number" name="harga" placeholder="harga Produk" required
-               style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
+    <label style="font-weight:bold; color:#1a3b5d;">Gambar</label>
+    <input type="file" name="gambar" required
+           style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
 
-        <div class="button-area" style="margin-top:20px; display:flex; justify-content:flex-end; gap:12px;">
-            <a href="{{ route('produkback') }}" 
-               class="btn-cancel" 
-               style="padding:8px 18px; background:#f0f0f0; border:1px solid #ccc; border-radius:4px; cursor:pointer;">
-                Batal
-            </a>
+    <label style="font-weight:bold; color:#1a3b5d;">Harga Produk</label>
+    <input type="number" name="harga" placeholder="Harga Produk" required
+           style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">
 
-            <button type="submit" class="btn-save"
-                    style="padding:8px 18px; background:#6bb7d6; border:none; color:white; border-radius:4px; cursor:pointer;">
-                Simpan Produk
-            </button>
-        </div>
+    <div class="button-area" style="margin-top:20px; display:flex; justify-content:flex-end; gap:12px;">
+        <a href="{{ route('produkback') }}" 
+           style="padding:8px 18px; background:#f0f0f0; border:1px solid #ccc; border-radius:4px;">
+            Batal
+        </a>
 
-    </form>
+        <button type="submit"
+                style="padding:8px 18px; background:#6bb7d6; border:none; color:white; border-radius:4px;">
+            Simpan Produk
+        </button>
+    </div>
+</form>
+
 
 </div>
+
+<!-- SCRIPT TAMBAHAN (AMAN) -->
+<script>
+    const namaInput = document.querySelector('input[name="nama"]');
+    const namaProdukHidden = document.getElementById('nama_produk');
+
+    // sinkronkan input nama -> nama_produk
+    namaProdukHidden.value = namaInput.value;
+
+    namaInput.addEventListener('input', function () {
+        namaProdukHidden.value = this.value;
+    });
+</script>
+
 
 @endsection

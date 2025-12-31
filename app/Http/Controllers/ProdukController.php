@@ -9,7 +9,7 @@ class ProdukController extends Controller
 {
     public function index()
     {
-        $produk = DB::table('produk')->get();
+        $produk = DB::table('produks')->get();
         return view('page.backend.produk.produkback', compact('produk'));
     }
 
@@ -30,8 +30,8 @@ class ProdukController extends Controller
         $fileName = time() . '.' . $request->gambar->extension();
         $request->gambar->move(public_path('uploads/produk'), $fileName);
 
-        DB::table('produk')->insert([
-            'nama_produk' => $request->nama_produk,
+        DB::table('produks')->insert([
+            'nama' => $request->nama_produk,
             'deskripsi' => $request->deskripsi,
             'harga' => $request->harga,
             'gambar' => $fileName,
@@ -42,13 +42,13 @@ class ProdukController extends Controller
 
     public function show($id)
     {
-        $produk = DB::table('produk')->where('id', $id)->first();
+        $produk = DB::table('produks')->where('id', $id)->first();
         return view('page.backend.produk.show', compact('produk'));
     }
 
     public function edit($id)
     {
-        $produk = DB::table('produk')->where('id', $id)->first();
+        $produk = DB::table('produks')->where('id', $id)->first();
         return view('page.backend.produk.edit', compact('produk'));
     }
 
@@ -61,7 +61,7 @@ class ProdukController extends Controller
         ]);
 
         $updateData = [
-            'nama_produk' => $request->nama_produk,
+            'nama' => $request->nama_produk,
             'deskripsi' => $request->deskripsi,
             'harga' => $request->harga,
         ];
@@ -72,32 +72,32 @@ class ProdukController extends Controller
             $updateData['gambar'] = $fileName;
         }
 
-        DB::table('produk')->where('id', $id)->update($updateData);
+        DB::table('produks')->where('id', $id)->update($updateData);
 
         return redirect()->route('produkback')->with('success', 'Produk berhasil diperbarui');
     }
 
     public function destroy($id)
     {
-        DB::table('produk')->where('id', $id)->delete();
+        DB::table('produks')->where('id', $id)->delete();
         return redirect()->route('produkback')->with('success', 'Produk berhasil dihapus');
     }
 
     // ================================
-    // FRONTEND PRODUK DESA (ASLI)
+    // FRONTEND PRODUK DESA
     // ================================
     public function frontend()
     {
-        $produk = DB::table('produk')->get();
+        $produk = DB::table('produks')->get();
         return view('page.frontend.produk.produkdesa', compact('produk'));
     }
 
     // ================================
-    // ✅ DETAIL PRODUK FRONTEND (TAMBAHAN)
+    // DETAIL PRODUK FRONTEND
     // ================================
     public function detailFrontend($id)
     {
-        $produk = DB::table('produk')->where('id', $id)->first();
+        $produk = DB::table('produks')->where('id', $id)->first();
 
         if (!$produk) {
             abort(404);

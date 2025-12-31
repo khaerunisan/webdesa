@@ -8,7 +8,7 @@
     <p>Apakah Anda yakin ingin menghapus produk berikut?</p>
 
     <div style="margin-top:20px; background:white; padding:20px; border-radius:6px;">
-        <p><strong>Nama Produk:</strong> {{ $produk->nama_produk }}</p>
+        <p><strong>Nama Produk:</strong> {{ $produk->nama }}</p>
         <p><strong>Harga:</strong> Rp {{ number_format($produk->harga, 0, ',', '.') }}</p>
         <p><strong>Deskripsi:</strong> {{ $produk->deskripsi }}</p>
 

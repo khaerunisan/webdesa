@@ -162,7 +162,7 @@
         <div class="right" style="flex:1; color:#fff;">
 
             <h2 style="margin:0; font-size:26px; font-weight:bold;">
-                {{ $item->nama_produk }}
+                {{ $item->nama}}
             </h2>
 
             <div class="price" style="margin-top:5px; font-size:18px; font-weight:bold;">

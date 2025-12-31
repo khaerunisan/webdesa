@@ -110,7 +110,7 @@
                     {{-- FOTO PRODUK --}}
                     <img class="card-image"
                          src="{{ asset('uploads/produk/' . $item->gambar) }}"
-                         alt="{{ $item->nama_produk }}">
+                         alt="{{ $item->nama}}">
 
                     <div class="p-4">
 

@@ -28,17 +28,18 @@ class AdminDashboardController extends Controller
         | LAINNYA (AMANKAN DULU)
         |================================
         */
-        $totalProduk = Schema::hasTable('produk')
-            ? DB::table('produk')->count()
+        $totalProduk = Schema::hasTable('produks')
+            ? DB::table('produks')->count()
             : 0;
 
         $totalPPID = Schema::hasTable('ppid')
             ? DB::table('ppid')->count()
             : 0;
 
-        $totalSaran = Schema::hasTable('kotak_saran')
-            ? DB::table('kotak_saran')->count()
+            $totalSaran = Schema::hasTable('kotak_sarans')
+            ? DB::table('kotak_sarans')->count()
             : 0;
+
 
         $totalVisitor = Schema::hasTable('visitors')
             ? DB::table('visitors')->count()

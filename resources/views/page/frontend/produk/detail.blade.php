@@ -31,12 +31,12 @@
         <div class="col-md-12">
             <img src="{{ asset('uploads/produk/' . $produk->gambar) }}"
                  class="produk-image"
-                 alt="{{ $produk->nama_produk }}">
+                 alt="{{ $produk->nama }}">
         </div>
 
         <!-- DETAIL PRODUK -->
         <div class="col-md-12">
-            <h2 class="mt-4">{{ $produk->nama_produk }}</h2>
+            <h2 class="mt-4">{{ $produk->nama }}</h2>
 
             <p class="text-muted">
                 <i class="far fa-calendar-alt"></i>

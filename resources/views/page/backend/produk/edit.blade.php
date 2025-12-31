@@ -145,7 +145,7 @@
         {{-- NAMA PRODUK --}}
         <label style="font-weight:bold; color:#1a3b5d;">Nama Produk</label>
         <input type="text" 
-               name="nama_produk" 
+               name="nama" 
                value="{{ $produk->nama_produk }}"
                required
                style="width:100%; padding:12px; border:1px solid #999; border-radius:3px; margin-bottom:25px;">

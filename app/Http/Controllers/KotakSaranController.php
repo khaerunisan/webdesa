@@ -12,6 +12,13 @@ class KotakSaranController extends Controller
     // ================================
     public function kirim(Request $request)
     {
+        // ✅ TAMBAHAN AMAN (VALIDASI)
+        $request->validate([
+            'nama'  => 'required',
+            'email' => 'required|email',
+            'pesan' => 'required',
+        ]);
+
         KotakSaran::create([
             'nama'   => $request->nama,
             'email'  => $request->email,
@@ -36,7 +43,7 @@ class KotakSaranController extends Controller
             })
             ->orderBy('created_at', 'desc')
             ->paginate(5)
-            ->withQueryString(); // 🔹 TAMBAHAN AMAN (search tidak hilang saat pindah halaman)
+            ->withQueryString();
 
         return view('page.backend.kotaksaran.saranback', compact('data'));
     }

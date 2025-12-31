@@ -128,7 +128,7 @@ class BeritaController extends Controller
     }
 
     // ==============================================================
-    // FRONTEND — DETAIL BERITA
+    // FRONTEND — DETAIL BERITA DESA
     // ==============================================================
     public function showDetailFE($id)
     {

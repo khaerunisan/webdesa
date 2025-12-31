@@ -104,7 +104,7 @@
 <div class="sidebar bg-secondary">
     <nav class="navbar navbar-dark flex-column">
         <a href="index.html" class="navbar-brand mx-4 mb-3">
-            <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+            <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>WEB DESA</h3>
         </a>
         
         <div class="d-flex align-items-center ms-4 mb-4">
@@ -150,6 +150,18 @@
 <div class="main-content">
     <div class="card-custom">
         <h2>Daftar Berita</h2>
+            <form method="GET" action="">
+                <div style="margin-bottom: 15px; width: 300px;">
+                    <input
+                        type="text"
+                        name="search"
+                        value="{{ request('search') }}"
+                        placeholder="Cari judul atau deskripsi..."
+                        style="width: 100%; padding: 8px;"
+                    >
+                </div>
+            </form>
+
         <a href="{{ route('berita.create') }}" class="btn-tambah">+ Tambah Berita</a>
         <table>
             <tr>
@@ -183,6 +195,11 @@
             </tr>
             @endforelse
         </table>
+        
+            <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                {{ $berita->withQueryString()->links('pagination::bootstrap-5') }}
+            </div>
+
     </div>
 </div>
 

@@ -190,36 +190,7 @@
                         </div>
                     </div>
 
-                    <!-- DATA TERBARU -->
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="bg-secondary rounded p-4">
-                                <h5 class="text-primary mb-3">Data Terbaru</h5>
-
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover text-center">
-                                        <thead>
-                                            <tr>
-                                                <th>Judul</th>
-                                                <th>Kategori</th>
-                                                <th>Tanggal</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($dataTerbaru as $item)
-                                            <tr>
-                                                <td>{{ $item->nama }}</td>
-                                                <td>{{ $item->kategori }}</td>
-                                                <td>{{ date('d F Y', strtotime($item->created_at)) }}</td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
         <!-- Sale & Revenue End -->

@@ -104,7 +104,7 @@
 <div class="sidebar bg-secondary">
     <nav class="navbar navbar-dark flex-column">
         <a href="index.html" class="navbar-brand mx-4 mb-3">
-            <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+            <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>WEB DESA</h3>
         </a>
         
         <div class="d-flex align-items-center ms-4 mb-4">
@@ -135,6 +135,27 @@
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Kotak Saran</h6>
         </div>
+
+            <form method="GET" action="">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input
+                            type="text"
+                            name="search"
+                            class="form-control"
+                            placeholder="Cari nama, email, atau pesan..."
+                            value="{{ request('search') }}"
+                        >
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">
+                            Cari
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+
 
         <div class="table-responsive">
             <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -239,6 +260,12 @@
                 </tbody>
 
             </table>
+            <div class="mt-3 d-flex justify-content-end">
+                {{ $data->onEachSide(1)->withQueryString()->links('pagination::bootstrap-5') }}
+            </div>
+
+
+
         </div>
     </div>
 </div>

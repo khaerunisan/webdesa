@@ -11,9 +11,17 @@ class BeritaController extends Controller
     // ========================
     // TAMPILKAN LIST BERITA
     // ========================
-    public function index()
+    public function index(Request $request) // ← hanya menambahkan Request
     {
-        $berita = Berita::all();
+        $search = $request->search;
+
+        $berita = Berita::when($search, function ($query, $search) {
+                $query->where('judul', 'like', "%{$search}%")
+                      ->orWhere('deskripsi', 'like', "%{$search}%");
+            })
+            ->orderBy('tanggal', 'desc')
+            ->paginate(5); // ← pagination
+
         return view('page.backend.berita.beritaback', compact('berita'));
     }
 
@@ -120,7 +128,7 @@ class BeritaController extends Controller
     }
 
     // ==============================================================
-    // FRONTEND — DETAIL BERITA (BARU DITAMBAHKAN)
+    // FRONTEND — DETAIL BERITA
     // ==============================================================
     public function showDetailFE($id)
     {

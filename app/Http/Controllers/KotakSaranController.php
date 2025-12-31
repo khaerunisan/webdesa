@@ -7,27 +7,43 @@ use App\Models\KotakSaran;
 
 class KotakSaranController extends Controller
 {
-    // SIMPAN DARI FE
+    // ================================
+    // SIMPAN SARAN DARI FRONTEND
+    // ================================
     public function kirim(Request $request)
     {
         KotakSaran::create([
-            'nama' => $request->nama,
-            'email' => $request->email,
-            'pesan' => $request->pesan,
+            'nama'   => $request->nama,
+            'email'  => $request->email,
+            'pesan'  => $request->pesan,
             'status' => 0
         ]);
 
         return back()->with('success', 'Saran berhasil dikirim');
     }
 
-    // TAMPIL BACKEND
-    public function saranback()
+    // ================================
+    // TAMPIL BACKEND + SEARCH + PAGINATION
+    // ================================
+    public function saranback(Request $request)
     {
-        $data = KotakSaran::latest()->get();
+        $search = $request->search;
+
+        $data = KotakSaran::when($search, function ($query, $search) {
+                $query->where('nama', 'like', "%{$search}%")
+                      ->orWhere('email', 'like', "%{$search}%")
+                      ->orWhere('pesan', 'like', "%{$search}%");
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(5)
+            ->withQueryString(); // 🔹 TAMBAHAN AMAN (search tidak hilang saat pindah halaman)
+
         return view('page.backend.kotaksaran.saranback', compact('data'));
     }
 
-    // TANDAI SUDAH DIBACA
+    // ================================
+    // TANDAI SARAN SUDAH DIBACA
+    // ================================
     public function dibaca($id)
     {
         KotakSaran::where('id', $id)->update([
@@ -37,7 +53,9 @@ class KotakSaranController extends Controller
         return back();
     }
 
+    // ================================
     // HAPUS SARAN
+    // ================================
     public function hapus($id)
     {
         KotakSaran::findOrFail($id)->delete();
